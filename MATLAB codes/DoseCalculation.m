@@ -18,7 +18,7 @@ OD_std_red = zeros([1 size(files,2)]);
 figure
 imagesc(imread(files{1,1}));
 pixel_size = 0.0085; %cm/pixel, obtained before
-ROI_size = 1; %cm
+ROI_size = 2; %cm
 ROI_size_pixels = ROI_size/pixel_size;
 r1 = drawrectangle('Position', [0 0 ROI_size_pixels ROI_size_pixels],'InteractionsAllowed','translate');
 %Wait to pass position until ROI has been confirmed with double click
@@ -30,6 +30,7 @@ Pos = r1.Position;
 for i = 1:size(files,2)
 
     %Read in each image, display with ROI for check
+    figure
     image = imread(files{1,i});
     imagesc(image)
     drawrectangle('Position', Pos);
@@ -51,6 +52,18 @@ for i = 1:size(files,2)
 
     %Standard deviation of optical density in ROI
     OD_std_red(:,i) = std(OD_red, 0, 'all');
+
+    %Create dose map for each roi
+    figure
+    Dosemap = fun(x, (OD_red- OD_control));
+    imagesc(Dosemap)
+    title(['Dose map film ' num2str(i)])
+    c = colorbar;
+    if i == 1
+        cmin = c.Limits(1);
+        cmax = c.Limits(2);
+    end
+    c.Limits = [cmin cmax];
 end
 
 %Calculate dose and uncertainty from found OD

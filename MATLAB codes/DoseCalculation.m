@@ -66,10 +66,9 @@ for i = 1:size(files,2)
     c.Limits = [cmin cmax];
 end
 
-%Calculate dose and uncertainty from found OD
+%Calculate dose
 Calculated_dose = fun(x, OD_avg_red);
-Dose_uncertainty = fun([plusminus_x1, plusminus_x2], OD_std_red);
 
 %Export data
-T = table(transpose(files), transpose(Calculated_dose), transpose(Dose_uncertainty),'VariableNames',{'File','Dose (Gy)', 'Uncertainty'});
+T = table(transpose(files), transpose(Calculated_dose), 'VariableNames',{'File','Dose (Gy)'});
 writetable(T,'Dose calculation data.xlsx');

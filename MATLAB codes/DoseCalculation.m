@@ -83,7 +83,7 @@ for i = 1:size(files,2)
     imagesc(Dosemap)
     title(['Dose map film ' num2str(i)])
     c = colorbar;
-    c.Limits = [0 10];
+    clim([0 10]);
     c.Label.String = 'Dose (Gy)';
 end
 

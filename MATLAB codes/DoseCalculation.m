@@ -83,8 +83,10 @@ for i = 1:size(files,2)
     imagesc(Dosemap)
     title(['Dose map film ' num2str(i)])
     c = colorbar;
-    clim([0 10]);
     c.Label.String = 'Dose (Gy)';
+    clim([0 10]);
+
+    exportgraphics(gcf,['Dose map_' num2str(i) '.jpg'])
 end
 
 %Calculate dose

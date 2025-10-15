@@ -13,6 +13,10 @@ cd(path)
 files = dir('*.tif');
 files = extractfield(files,'name');
 
+%Remove outlier at film 16
+Doses(16) = [];
+files(16) = [];
+    
 %Prepare matrix for optical densities
 OD_avg_red = zeros([1 size(files,2)]);
 OD_std_red = zeros([1 size(files,2)]);
@@ -57,9 +61,9 @@ end
 
 %Correct optical densities to net optical density (AAPM)
 OD_control = mean(OD_avg_red(:,1:repeat),'all');
-OD_avg_red = OD_avg_red(:, (repeat+1):end) - OD_control;
-Doses = Doses(:,(repeat+1):end);
-OD_std_red = OD_std_red(:,(repeat+1):end);
+OD_avg_red = OD_avg_red(:, (repeat):end) - OD_control;
+Doses = Doses(:,(repeat):end);
+OD_std_red = OD_std_red(:,(repeat):end);
 
 %Plot optical density data
 figure
@@ -94,7 +98,7 @@ n = nvalues(I);
 
 %Refit with optimal n
 fun = @(x,OD_avg_red) x(1)*OD_avg_red + x(2)*(OD_avg_red).^n;
-[x,residuals,~,CovB,~,ErrorModelInfo] = nlinfit(OD_avg_red, Doses, fun, [1 1]);
+x = nlinfit(OD_avg_red, Doses, fun, [1 1]);
 
 %Plot calibration curve
 ods = 0:0.01:round(max(OD_avg_red),1);
@@ -107,17 +111,11 @@ txt2 = ['R2 = ' num2str(round(R2,2))];
 txt = {txt1, txt2};
 text(0.1,3,txt)
 
-%Confidence interval of parameters
-ci = nlparci(x, residuals, "Covar", CovB);
-pm = transpose(x) - ci(:,1);
-plusminus_x1 = pm(1);
-plusminus_x2 = pm(2);
-
 %Export data
 if ~[exist('Calibration data')]==0
     rmdir('Calibration data', 's')
 end
 mkdir('Calibration data')
 cd('Calibration data\')
-save('Calibration_data.mat', 'fun', 'n', 'x', 'plusminus_x1','plusminus_x2', 'R2', 'OD_control')
+save('Calibration_data.mat', 'fun', 'n', 'x', 'R2', 'OD_control')
 saveas(gcf, 'Calibration_curve.jpeg')

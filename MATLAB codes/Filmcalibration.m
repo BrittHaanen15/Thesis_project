@@ -23,7 +23,7 @@ OD_std_red = zeros([1 size(files,2)]);
 
 %Display first film to select ROI on which the calibration is carried out
 figure
-imagesc(imread(files{1,23}));
+imagesc(imread(files{1,22}));
 pixel_size = 0.0085; %cm/pixel, obtained before
 ROI_size = 1; %cm
 ROI_size_pixels = ROI_size/pixel_size;
@@ -61,9 +61,9 @@ end
 
 %Correct optical densities to net optical density (AAPM)
 OD_control = mean(OD_avg_red(:,1:repeat),'all');
-OD_avg_red = OD_avg_red(:, (repeat):end) - OD_control;
-Doses = Doses(:,(repeat):end);
-OD_std_red = OD_std_red(:,(repeat):end);
+OD_avg_red = OD_avg_red(:, (repeat+1):end) - OD_control;
+Doses = Doses(:,(repeat+1):end);
+OD_std_red = OD_std_red(:,(repeat+1):end);
 
 %Plot optical density data
 figure

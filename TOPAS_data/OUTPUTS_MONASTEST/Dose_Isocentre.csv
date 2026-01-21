@@ -1,6 +1,6 @@
 # TOPAS Version: 3.9
 # Parameter File: Irr_setup_withMONAS.txt
 # Results for scorer: Dose_Isocentre
-# Scored in component: ScorerCellLayer
+# Scored in component: SolidWater10
 # DoseToWater ( Gy ) : Sum   
-4.995154290199366e-11
+5.785960599524742e-10

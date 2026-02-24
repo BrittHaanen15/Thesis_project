@@ -3,7 +3,7 @@
 #####################################################################################################################
 
 #Number of particles to simulate CAN CHANGE THIS
-i:NrHistories = 100000
+i:NrHistories = 10000
 
 #Amount of solid water added to setup on top of nozzle CAN CHANGE THIS
 d:SolidWaterAdded = 45.5 mm

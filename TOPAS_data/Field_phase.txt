@@ -3,7 +3,7 @@
 #####################################################################################################################
 
 #Number of particles to simulate CAN CHANGE THIS
-i:NrHistories = 10000
+i:NrHistories = 500000
 
 #Amount of solid water added to setup on top of nozzle CAN CHANGE THIS
 d:SolidWaterAdded = 45.5 mm
@@ -408,6 +408,43 @@ b:Sc/Phase32/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
 #s:Sc/Phase32/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase32/OutputFile = "./do_field/32"
 
+### SCORER 33 mm ############################################################################################
+#Define scorer position
+d:Scorer33TransX = 0. cm
+d:Scorer33TransY = 0. cm
+d:Scorer33TransZ = Scorer0TransZ + 3.3 cm
+
+#Define scorer
+s:Ge/Scorer33/Type = "TsBox"
+s:Ge/Scorer33/Parent = "SolidWater"
+s:Ge/Scorer33/Material = "G4_WATER"
+d:Ge/Scorer33/HLX = Scorer0HLX cm
+d:Ge/Scorer33/HLY = Scorer0HLY cm
+d:Ge/Scorer33/HLZ = Scorer0HLZ cm
+d:Ge/Scorer33/TransX = Scorer0TransX cm
+d:Ge/Scorer33/TransY = Scorer0TransY cm
+d:Ge/Scorer33/TransZ = Scorer33TransZ cm
+d:Ge/Scorer33/RotX = 0. deg
+d:Ge/Scorer33/RotY = 0. deg
+d:Ge/Scorer33/RotZ = 0. deg
+s:Ge/Scorer33/Color = "red"
+s:Ge/Scorer33/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase33/Quantity                              = "PhaseSpace"
+s:Sc/Phase33/Surface                               = "Scorer33/ZminusSurface"
+b:Sc/Phase33/OutputToConsole                       = "True"
+s:Sc/Phase33/OutputType                            = "ASCII"
+s:Sc/Phase33/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase0/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase33/IncludeRunID = "True"
+b:Sc/Phase33/IncludeEventID = "True"
+b:Sc/Phase33/IncludeTrackID = "True"
+b:Sc/Phase33/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase33/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase33/OutputFile = "./do_field/33"
+
 ### SCORER 34 mm ############################################################################################
 #Define scorer position
 d:Scorer34TransX = 0. cm
@@ -444,6 +481,80 @@ b:Sc/Phase34/IncludeTrackID = "True"
 b:Sc/Phase34/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
 #s:Sc/Phase34/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase34/OutputFile = "./do_field/34"
+
+### SCORER 35 mm ############################################################################################
+#Define scorer position
+d:Scorer35TransX = 0. cm
+d:Scorer35TransY = 0. cm
+d:Scorer35TransZ = Scorer0TransZ + 3.5 cm
+
+#Define scorer
+s:Ge/Scorer35/Type = "TsBox"
+s:Ge/Scorer35/Parent = "SolidWater"
+s:Ge/Scorer35/Material = "G4_WATER"
+d:Ge/Scorer35/HLX = Scorer0HLX cm
+d:Ge/Scorer35/HLY = Scorer0HLY cm
+d:Ge/Scorer35/HLZ = Scorer0HLZ cm
+d:Ge/Scorer35/TransX = Scorer0TransX cm
+d:Ge/Scorer35/TransY = Scorer0TransY cm
+d:Ge/Scorer35/TransZ = Scorer35TransZ cm
+d:Ge/Scorer35/RotX = 0. deg
+d:Ge/Scorer35/RotY = 0. deg
+d:Ge/Scorer35/RotZ = 0. deg
+s:Ge/Scorer35/Color = "red"
+s:Ge/Scorer35/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase35/Quantity                              = "PhaseSpace"
+s:Sc/Phase35/Surface                               = "Scorer35/ZminusSurface"
+b:Sc/Phase35/OutputToConsole                       = "True"
+s:Sc/Phase35/OutputType                            = "ASCII"
+s:Sc/Phase35/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase35/IncludeRunID = "True"
+b:Sc/Phase35/IncludeEventID = "True"
+b:Sc/Phase35/IncludeTrackID = "True"
+b:Sc/Phase35/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase35/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase35/OutputFile = "./do_field/35"
+
+### SCORER 35.5 mm ############################################################################################
+#Define scorer position
+d:Scorer355TransX = 0. cm
+d:Scorer355TransY = 0. cm
+d:Scorer355TransZ = Scorer0TransZ + 3.55 cm
+
+#Define scorer
+s:Ge/Scorer355/Type = "TsBox"
+s:Ge/Scorer355/Parent = "SolidWater"
+s:Ge/Scorer355/Material = "G4_WATER"
+d:Ge/Scorer355/HLX = Scorer0HLX cm
+d:Ge/Scorer355/HLY = Scorer0HLY cm
+d:Ge/Scorer355/HLZ = Scorer0HLZ cm
+d:Ge/Scorer355/TransX = Scorer0TransX cm
+d:Ge/Scorer355/TransY = Scorer0TransY cm
+d:Ge/Scorer355/TransZ = Scorer355TransZ cm
+d:Ge/Scorer355/RotX = 0. deg
+d:Ge/Scorer355/RotY = 0. deg
+d:Ge/Scorer355/RotZ = 0. deg
+s:Ge/Scorer355/Color = "red"
+s:Ge/Scorer355/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase355/Quantity                              = "PhaseSpace"
+s:Sc/Phase355/Surface                               = "Scorer355/ZminusSurface"
+b:Sc/Phase355/OutputToConsole                       = "True"
+s:Sc/Phase355/OutputType                            = "ASCII"
+s:Sc/Phase355/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase355/IncludeRunID = "True"
+b:Sc/Phase355/IncludeEventID = "True"
+b:Sc/Phase355/IncludeTrackID = "True"
+b:Sc/Phase355/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase355/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase355/OutputFile = "./do_field/35.5"
 
 ### SCORER 36 mm ############################################################################################
 #Define scorer position
@@ -482,6 +593,119 @@ b:Sc/Phase36/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
 #s:Sc/Phase36/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase36/OutputFile = "./do_field/36"
 
+### SCORER 36.5 mm ############################################################################################
+#Define scorer position
+d:Scorer365TransX = 0. cm
+d:Scorer365TransY = 0. cm
+d:Scorer365TransZ = Scorer0TransZ + 3.65 cm
+
+#Define scorer
+s:Ge/Scorer365/Type = "TsBox"
+s:Ge/Scorer365/Parent = "SolidWater"
+s:Ge/Scorer365/Material = "G4_WATER"
+d:Ge/Scorer365/HLX = Scorer0HLX cm
+d:Ge/Scorer365/HLY = Scorer0HLY cm
+d:Ge/Scorer365/HLZ = Scorer0HLZ cm
+d:Ge/Scorer365/TransX = Scorer0TransX cm
+d:Ge/Scorer365/TransY = Scorer0TransY cm
+d:Ge/Scorer365/TransZ = Scorer365TransZ cm
+d:Ge/Scorer365/RotX = 0. deg
+d:Ge/Scorer365/RotY = 0. deg
+d:Ge/Scorer365/RotZ = 0. deg
+s:Ge/Scorer365/Color = "red"
+s:Ge/Scorer365/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase365/Quantity                              = "PhaseSpace"
+s:Sc/Phase365/Surface                               = "Scorer365/ZminusSurface"
+b:Sc/Phase365/OutputToConsole                       = "True"
+s:Sc/Phase365/OutputType                            = "ASCII"
+s:Sc/Phase365/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase365/IncludeRunID = "True"
+b:Sc/Phase365/IncludeEventID = "True"
+b:Sc/Phase365/IncludeTrackID = "True"
+b:Sc/Phase365/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase365/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase365/OutputFile = "./do_field/36.5"
+
+
+### SCORER 37 mm ############################################################################################
+#Define scorer position
+d:Scorer37TransX = 0. cm
+d:Scorer37TransY = 0. cm
+d:Scorer37TransZ = Scorer0TransZ + 3.7 cm
+
+#Define scorer
+s:Ge/Scorer37/Type = "TsBox"
+s:Ge/Scorer37/Parent = "SolidWater"
+s:Ge/Scorer37/Material = "G4_WATER"
+d:Ge/Scorer37/HLX = Scorer0HLX cm
+d:Ge/Scorer37/HLY = Scorer0HLY cm
+d:Ge/Scorer37/HLZ = Scorer0HLZ cm
+d:Ge/Scorer37/TransX = Scorer0TransX cm
+d:Ge/Scorer37/TransY = Scorer0TransY cm
+d:Ge/Scorer37/TransZ = Scorer37TransZ cm
+d:Ge/Scorer37/RotX = 0. deg
+d:Ge/Scorer37/RotY = 0. deg
+d:Ge/Scorer37/RotZ = 0. deg
+s:Ge/Scorer37/Color = "red"
+s:Ge/Scorer37/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase37/Quantity                              = "PhaseSpace"
+s:Sc/Phase37/Surface                               = "Scorer37/ZminusSurface"
+b:Sc/Phase37/OutputToConsole                       = "True"
+s:Sc/Phase37/OutputType                            = "ASCII"
+s:Sc/Phase37/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase37/IncludeRunID = "True"
+b:Sc/Phase37/IncludeEventID = "True"
+b:Sc/Phase37/IncludeTrackID = "True"
+b:Sc/Phase37/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase37/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase37/OutputFile = "./do_field/37"
+
+### SCORER 37.5 mm ############################################################################################
+#Define scorer position
+d:Scorer375TransX = 0. cm
+d:Scorer375TransY = 0. cm
+d:Scorer375TransZ = Scorer0TransZ + 3.75 cm
+
+#Define scorer
+s:Ge/Scorer375/Type = "TsBox"
+s:Ge/Scorer375/Parent = "SolidWater"
+s:Ge/Scorer375/Material = "G4_WATER"
+d:Ge/Scorer375/HLX = Scorer0HLX cm
+d:Ge/Scorer375/HLY = Scorer0HLY cm
+d:Ge/Scorer375/HLZ = Scorer0HLZ cm
+d:Ge/Scorer375/TransX = Scorer0TransX cm
+d:Ge/Scorer375/TransY = Scorer0TransY cm
+d:Ge/Scorer375/TransZ = Scorer375TransZ cm
+d:Ge/Scorer375/RotX = 0. deg
+d:Ge/Scorer375/RotY = 0. deg
+d:Ge/Scorer375/RotZ = 0. deg
+s:Ge/Scorer375/Color = "red"
+s:Ge/Scorer375/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase375/Quantity                              = "PhaseSpace"
+s:Sc/Phase375/Surface                               = "Scorer375/ZminusSurface"
+b:Sc/Phase375/OutputToConsole                       = "True"
+s:Sc/Phase375/OutputType                            = "ASCII"
+s:Sc/Phase375/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase375/IncludeRunID = "True"
+b:Sc/Phase375/IncludeEventID = "True"
+b:Sc/Phase375/IncludeTrackID = "True"
+b:Sc/Phase375/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase375/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase375/OutputFile = "./do_field/37.5"
+
+
 ### SCORER 38 mm ############################################################################################
 #Define scorer position
 d:Scorer38TransX = 0. cm
@@ -518,6 +742,117 @@ b:Sc/Phase38/IncludeTrackID = "True"
 b:Sc/Phase38/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
 #s:Sc/Phase38/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase38/OutputFile = "./do_field/38"
+
+### SCORER 38.5 mm ############################################################################################
+#Define scorer position
+d:Scorer385TransX = 0. cm
+d:Scorer385TransY = 0. cm
+d:Scorer385TransZ = Scorer0TransZ + 3.85 cm
+
+#Define scorer
+s:Ge/Scorer385/Type = "TsBox"
+s:Ge/Scorer385/Parent = "SolidWater"
+s:Ge/Scorer385/Material = "G4_WATER"
+d:Ge/Scorer385/HLX = Scorer0HLX cm
+d:Ge/Scorer385/HLY = Scorer0HLY cm
+d:Ge/Scorer385/HLZ = Scorer0HLZ cm
+d:Ge/Scorer385/TransX = Scorer0TransX cm
+d:Ge/Scorer385/TransY = Scorer0TransY cm
+d:Ge/Scorer385/TransZ = Scorer385TransZ cm
+d:Ge/Scorer385/RotX = 0. deg
+d:Ge/Scorer385/RotY = 0. deg
+d:Ge/Scorer385/RotZ = 0. deg
+s:Ge/Scorer385/Color = "red"
+s:Ge/Scorer385/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase385/Quantity                              = "PhaseSpace"
+s:Sc/Phase385/Surface                               = "Scorer385/ZminusSurface"
+b:Sc/Phase385/OutputToConsole                       = "True"
+s:Sc/Phase385/OutputType                            = "ASCII"
+s:Sc/Phase385/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase385/IncludeRunID = "True"
+b:Sc/Phase385/IncludeEventID = "True"
+b:Sc/Phase385/IncludeTrackID = "True"
+b:Sc/Phase385/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase385/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase385/OutputFile = "./do_field/38.5"
+
+### SCORER 39 mm ############################################################################################
+#Define scorer position
+d:Scorer39TransX = 0. cm
+d:Scorer39TransY = 0. cm
+d:Scorer39TransZ = Scorer0TransZ + 3.9 cm
+
+#Define scorer
+s:Ge/Scorer39/Type = "TsBox"
+s:Ge/Scorer39/Parent = "SolidWater"
+s:Ge/Scorer39/Material = "G4_WATER"
+d:Ge/Scorer39/HLX = Scorer0HLX cm
+d:Ge/Scorer39/HLY = Scorer0HLY cm
+d:Ge/Scorer39/HLZ = Scorer0HLZ cm
+d:Ge/Scorer39/TransX = Scorer0TransX cm
+d:Ge/Scorer39/TransY = Scorer0TransY cm
+d:Ge/Scorer39/TransZ = Scorer39TransZ cm
+d:Ge/Scorer39/RotX = 0. deg
+d:Ge/Scorer39/RotY = 0. deg
+d:Ge/Scorer39/RotZ = 0. deg
+s:Ge/Scorer39/Color = "red"
+s:Ge/Scorer39/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase39/Quantity                              = "PhaseSpace"
+s:Sc/Phase39/Surface                               = "Scorer39/ZminusSurface"
+b:Sc/Phase39/OutputToConsole                       = "True"
+s:Sc/Phase39/OutputType                            = "ASCII"
+s:Sc/Phase39/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase39/IncludeRunID = "True"
+b:Sc/Phase39/IncludeEventID = "True"
+b:Sc/Phase39/IncludeTrackID = "True"
+b:Sc/Phase39/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase39/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase39/OutputFile = "./do_field/39"
+
+### SCORER 39.5 mm ############################################################################################
+#Define scorer position
+d:Scorer395TransX = 0. cm
+d:Scorer395TransY = 0. cm
+d:Scorer395TransZ = Scorer0TransZ + 3.95 cm
+
+#Define scorer
+s:Ge/Scorer395/Type = "TsBox"
+s:Ge/Scorer395/Parent = "SolidWater"
+s:Ge/Scorer395/Material = "G4_WATER"
+d:Ge/Scorer395/HLX = Scorer0HLX cm
+d:Ge/Scorer395/HLY = Scorer0HLY cm
+d:Ge/Scorer395/HLZ = Scorer0HLZ cm
+d:Ge/Scorer395/TransX = Scorer0TransX cm
+d:Ge/Scorer395/TransY = Scorer0TransY cm
+d:Ge/Scorer395/TransZ = Scorer395TransZ cm
+d:Ge/Scorer395/RotX = 0. deg
+d:Ge/Scorer395/RotY = 0. deg
+d:Ge/Scorer395/RotZ = 0. deg
+s:Ge/Scorer395/Color = "red"
+s:Ge/Scorer395/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase395/Quantity                              = "PhaseSpace"
+s:Sc/Phase395/Surface                               = "Scorer395/ZminusSurface"
+b:Sc/Phase395/OutputToConsole                       = "True"
+s:Sc/Phase395/OutputType                            = "ASCII"
+s:Sc/Phase395/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase395/IncludeRunID = "True"
+b:Sc/Phase395/IncludeEventID = "True"
+b:Sc/Phase395/IncludeTrackID = "True"
+b:Sc/Phase395/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase395/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase395/OutputFile = "./do_field/39.5"
 
 ### SCORER 40 mm ############################################################################################
 #Define scorer position
@@ -557,6 +892,120 @@ b:Sc/Phase40/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
 s:Sc/Phase40/OutputFile = "./do_field/40"
 s:Sc/Phase40/IncludeEmptyHistories = "None"
 
+### SCORER 40.5 mm ############################################################################################
+#Define scorer position
+d:Scorer405TransX = 0. cm
+d:Scorer405TransY = 0. cm
+d:Scorer405TransZ = Scorer0TransZ + 4.05 cm
+
+#Define scorer
+s:Ge/Scorer405/Type = "TsBox"
+s:Ge/Scorer405/Parent = "SolidWater"
+s:Ge/Scorer405/Material = "G4_WATER"
+d:Ge/Scorer405/HLX = Scorer0HLX cm
+d:Ge/Scorer405/HLY = Scorer0HLY cm
+d:Ge/Scorer405/HLZ = Scorer0HLZ cm
+d:Ge/Scorer405/TransX = Scorer0TransX cm
+d:Ge/Scorer405/TransY = Scorer0TransY cm
+d:Ge/Scorer405/TransZ = Scorer405TransZ cm
+d:Ge/Scorer405/RotX = 0. deg
+d:Ge/Scorer405/RotY = 0. deg
+d:Ge/Scorer405/RotZ = 0. deg
+s:Ge/Scorer405/Color = "red"
+s:Ge/Scorer405/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase405/Quantity                              = "PhaseSpace"
+s:Sc/Phase405/Surface                               = "Scorer405/ZminusSurface"
+b:Sc/Phase405/OutputToConsole                       = "True"
+s:Sc/Phase405/OutputType                            = "ASCII"
+s:Sc/Phase405/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase405/IncludeRunID = "True"
+b:Sc/Phase405/IncludeEventID = "True"
+b:Sc/Phase405/IncludeTrackID = "True"
+b:Sc/Phase405/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase405/OutputFile = "./do_field/40.5"
+s:Sc/Phase405/IncludeEmptyHistories = "None"
+
+### SCORER 41 mm ############################################################################################
+#Define scorer position
+d:Scorer41TransX = 0. cm
+d:Scorer41TransY = 0. cm
+d:Scorer41TransZ = Scorer0TransZ + 4.1 cm
+
+#Define scorer
+s:Ge/Scorer41/Type = "TsBox"
+s:Ge/Scorer41/Parent = "SolidWater"
+s:Ge/Scorer41/Material = "G4_WATER"
+d:Ge/Scorer41/HLX = Scorer0HLX cm
+d:Ge/Scorer41/HLY = Scorer0HLY cm
+d:Ge/Scorer41/HLZ = Scorer0HLZ cm
+d:Ge/Scorer41/TransX = Scorer0TransX cm
+d:Ge/Scorer41/TransY = Scorer0TransY cm
+d:Ge/Scorer41/TransZ = Scorer41TransZ cm
+d:Ge/Scorer41/RotX = 0. deg
+d:Ge/Scorer41/RotY = 0. deg
+d:Ge/Scorer41/RotZ = 0. deg
+s:Ge/Scorer41/Color = "red"
+s:Ge/Scorer41/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase41/Quantity                              = "PhaseSpace"
+s:Sc/Phase41/Surface                               = "Scorer41/ZminusSurface"
+b:Sc/Phase41/OutputToConsole                       = "True"
+s:Sc/Phase41/OutputType                            = "ASCII"
+s:Sc/Phase41/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase41/IncludeRunID = "True"
+b:Sc/Phase41/IncludeEventID = "True"
+b:Sc/Phase41/IncludeTrackID = "True"
+b:Sc/Phase41/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase41/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase41/OutputFile = "./do_field/41"
+s:Sc/Phase41/IncludeEmptyHistories = "None"
+
+### SCORER 41.5 mm ############################################################################################
+#Define scorer position
+d:Scorer415TransX = 0. cm
+d:Scorer415TransY = 0. cm
+d:Scorer415TransZ = Scorer0TransZ + 4.15 cm
+
+#Define scorer
+s:Ge/Scorer415/Type = "TsBox"
+s:Ge/Scorer415/Parent = "SolidWater"
+s:Ge/Scorer415/Material = "G4_WATER"
+d:Ge/Scorer415/HLX = Scorer0HLX cm
+d:Ge/Scorer415/HLY = Scorer0HLY cm
+d:Ge/Scorer415/HLZ = Scorer0HLZ cm
+d:Ge/Scorer415/TransX = Scorer0TransX cm
+d:Ge/Scorer415/TransY = Scorer0TransY cm
+d:Ge/Scorer415/TransZ = Scorer415TransZ cm
+d:Ge/Scorer415/RotX = 0. deg
+d:Ge/Scorer415/RotY = 0. deg
+d:Ge/Scorer415/RotZ = 0. deg
+s:Ge/Scorer415/Color = "red"
+s:Ge/Scorer415/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase415/Quantity                              = "PhaseSpace"
+s:Sc/Phase415/Surface                               = "Scorer415/ZminusSurface"
+b:Sc/Phase415/OutputToConsole                       = "True"
+s:Sc/Phase415/OutputType                            = "ASCII"
+s:Sc/Phase415/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase415/IncludeRunID = "True"
+b:Sc/Phase415/IncludeEventID = "True"
+b:Sc/Phase415/IncludeTrackID = "True"
+b:Sc/Phase415/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase415/OutputFile = "./do_field/41.5"
+s:Sc/Phase415/IncludeEmptyHistories = "None"
+
 ### SCORER 42 mm ############################################################################################
 #Define scorer position
 d:Scorer42TransX = 0. cm
@@ -595,6 +1044,120 @@ b:Sc/Phase42/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
 s:Sc/Phase42/OutputFile = "./do_field/42"
 s:Sc/Phase42/IncludeEmptyHistories = "None"
 
+### SCORER 42.5 mm ############################################################################################
+#Define scorer position
+d:Scorer425TransX = 0. cm
+d:Scorer425TransY = 0. cm
+d:Scorer425TransZ = Scorer0TransZ + 4.25 cm
+
+#Define scorer
+s:Ge/Scorer425/Type = "TsBox"
+s:Ge/Scorer425/Parent = "SolidWater"
+s:Ge/Scorer425/Material = "G4_WATER"
+d:Ge/Scorer425/HLX = Scorer0HLX cm
+d:Ge/Scorer425/HLY = Scorer0HLY cm
+d:Ge/Scorer425/HLZ = Scorer0HLZ cm
+d:Ge/Scorer425/TransX = Scorer0TransX cm
+d:Ge/Scorer425/TransY = Scorer0TransY cm
+d:Ge/Scorer425/TransZ = Scorer425TransZ cm
+d:Ge/Scorer425/RotX = 0. deg
+d:Ge/Scorer425/RotY = 0. deg
+d:Ge/Scorer425/RotZ = 0. deg
+s:Ge/Scorer425/Color = "red"
+s:Ge/Scorer425/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase425/Quantity                              = "PhaseSpace"
+s:Sc/Phase425/Surface                               = "Scorer425/ZminusSurface"
+b:Sc/Phase425/OutputToConsole                       = "True"
+s:Sc/Phase425/OutputType                            = "ASCII"
+s:Sc/Phase425/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase425/IncludeRunID = "True"
+b:Sc/Phase425/IncludeEventID = "True"
+b:Sc/Phase425/IncludeTrackID = "True"
+b:Sc/Phase425/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase425/OutputFile = "./do_field/42.5"
+s:Sc/Phase425/IncludeEmptyHistories = "None"
+
+### SCORER 43 mm ############################################################################################
+#Define scorer position
+d:Scorer43TransX = 0. cm
+d:Scorer43TransY = 0. cm
+d:Scorer43TransZ = Scorer0TransZ + 4.3 cm
+
+#Define scorer
+s:Ge/Scorer43/Type = "TsBox"
+s:Ge/Scorer43/Parent = "SolidWater"
+s:Ge/Scorer43/Material = "G4_WATER"
+d:Ge/Scorer43/HLX = Scorer0HLX cm
+d:Ge/Scorer43/HLY = Scorer0HLY cm
+d:Ge/Scorer43/HLZ = Scorer0HLZ cm
+d:Ge/Scorer43/TransX = Scorer0TransX cm
+d:Ge/Scorer43/TransY = Scorer0TransY cm
+d:Ge/Scorer43/TransZ = Scorer43TransZ cm
+d:Ge/Scorer43/RotX = 0. deg
+d:Ge/Scorer43/RotY = 0. deg
+d:Ge/Scorer43/RotZ = 0. deg
+s:Ge/Scorer43/Color = "red"
+s:Ge/Scorer43/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase43/Quantity                              = "PhaseSpace"
+s:Sc/Phase43/Surface                               = "Scorer43/ZminusSurface"
+b:Sc/Phase43/OutputToConsole                       = "True"
+s:Sc/Phase43/OutputType                            = "ASCII"
+s:Sc/Phase43/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase43/IncludeRunID = "True"
+b:Sc/Phase43/IncludeEventID = "True"
+b:Sc/Phase43/IncludeTrackID = "True"
+b:Sc/Phase43/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase43/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase43/OutputFile = "./do_field/43"
+s:Sc/Phase43/IncludeEmptyHistories = "None"
+
+### SCORER 43.5 mm ############################################################################################
+#Define scorer position
+d:Scorer435TransX = 0. cm
+d:Scorer435TransY = 0. cm
+d:Scorer435TransZ = Scorer0TransZ + 4.35 cm
+
+#Define scorer
+s:Ge/Scorer435/Type = "TsBox"
+s:Ge/Scorer435/Parent = "SolidWater"
+s:Ge/Scorer435/Material = "G4_WATER"
+d:Ge/Scorer435/HLX = Scorer0HLX cm
+d:Ge/Scorer435/HLY = Scorer0HLY cm
+d:Ge/Scorer435/HLZ = Scorer0HLZ cm
+d:Ge/Scorer435/TransX = Scorer0TransX cm
+d:Ge/Scorer435/TransY = Scorer0TransY cm
+d:Ge/Scorer435/TransZ = Scorer435TransZ cm
+d:Ge/Scorer435/RotX = 0. deg
+d:Ge/Scorer435/RotY = 0. deg
+d:Ge/Scorer435/RotZ = 0. deg
+s:Ge/Scorer435/Color = "red"
+s:Ge/Scorer435/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase435/Quantity                              = "PhaseSpace"
+s:Sc/Phase435/Surface                               = "Scorer435/ZminusSurface"
+b:Sc/Phase435/OutputToConsole                       = "True"
+s:Sc/Phase435/OutputType                            = "ASCII"
+s:Sc/Phase435/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase435/IncludeRunID = "True"
+b:Sc/Phase435/IncludeEventID = "True"
+b:Sc/Phase435/IncludeTrackID = "True"
+b:Sc/Phase435/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase435/OutputFile = "./do_field/43.5"
+s:Sc/Phase435/IncludeEmptyHistories = "None"
+
 ### SCORER 44 mm ############################################################################################
 #Define scorer position
 d:Scorer44TransX = 0. cm
@@ -632,6 +1195,44 @@ b:Sc/Phase44/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
 #s:Sc/Phase44/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase44/OutputFile = "./do_field/44"
 s:Sc/Phase44/IncludeEmptyHistories = "None"
+
+### SCORER 44.5 mm ############################################################################################
+#Define scorer position
+d:Scorer445TransX = 0. cm
+d:Scorer445TransY = 0. cm
+d:Scorer445TransZ = Scorer0TransZ + 4.45 cm
+
+#Define scorer
+s:Ge/Scorer445/Type = "TsBox"
+s:Ge/Scorer445/Parent = "SolidWater"
+s:Ge/Scorer445/Material = "G4_WATER"
+d:Ge/Scorer445/HLX = Scorer0HLX cm
+d:Ge/Scorer445/HLY = Scorer0HLY cm
+d:Ge/Scorer445/HLZ = Scorer0HLZ cm
+d:Ge/Scorer445/TransX = Scorer0TransX cm
+d:Ge/Scorer445/TransY = Scorer0TransY cm
+d:Ge/Scorer445/TransZ = Scorer445TransZ cm
+d:Ge/Scorer445/RotX = 0. deg
+d:Ge/Scorer445/RotY = 0. deg
+d:Ge/Scorer445/RotZ = 0. deg
+s:Ge/Scorer445/Color = "red"
+s:Ge/Scorer445/DrawingStyle = "Solid"
+
+#Scoring phase space
+s:Sc/Phase445/Quantity                              = "PhaseSpace"
+s:Sc/Phase445/Surface                               = "Scorer445/ZminusSurface"
+b:Sc/Phase445/OutputToConsole                       = "True"
+s:Sc/Phase445/OutputType                            = "ASCII"
+s:Sc/Phase445/IfOutputFileAlreadyExists             = "Overwrite"
+#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
+#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
+b:Sc/Phase445/IncludeRunID = "True"
+b:Sc/Phase445/IncludeEventID = "True"
+b:Sc/Phase445/IncludeTrackID = "True"
+b:Sc/Phase445/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
+#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase445/OutputFile = "./do_field/44.5"
+s:Sc/Phase445/IncludeEmptyHistories = "None"
 
 ### SCORER 45 mm ############################################################################################
 #Define scorer position

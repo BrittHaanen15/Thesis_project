@@ -3,7 +3,7 @@
 #####################################################################################################################
 
 #Number of particles to simulate CAN CHANGE THIS
-i:NrHistories = 10000
+i:NrHistories = 100000
 
 #Amount of solid water added to setup on top of nozzle CAN CHANGE THIS
 d:SolidWaterAdded = 45.5 mm
@@ -238,21 +238,20 @@ d:Ge/Scorer0/RotZ = 0. deg
 s:Ge/Scorer0/Color = "red"
 s:Ge/Scorer0/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase0/Quantity                              = "PhaseSpace"
-s:Sc/Phase0/Surface                               = "Scorer0/ZminusSurface"
-b:Sc/Phase0/OutputToConsole                       = "True"
-s:Sc/Phase0/OutputType                            = "ASCII"
-s:Sc/Phase0/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase0/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase0/IncludeRunID = "True"
-b:Sc/Phase0/IncludeEventID = "True"
-b:Sc/Phase0/IncludeTrackID = "True"
-b:Sc/Phase0/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase0/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase0/OutputFile = "./do_field/0"
-s:Sc/Phase0/IncludeEmptyHistories = "None"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_0/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_0/Quantity = "ProtonLET"
+s:Sc/LET_0/Component = "Scorer0"
+s:Sc/LET_0/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_0/OutputType = "csv"
+s:Sc/LET_0/OutputFile = "./do_field/LET/0"
+
+#Scoring Dose
+s:Sc/Dose_0/Quantity = "DoseToWater"
+s:Sc/Dose_0/Component = "Scorer0"
+s:Sc/Dose_0/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_0/OutputType = "csv"
+s:Sc/Dose_0/OutputFile = "./do_field/Dose/0"
 
 ### SCORER 10 mm ############################################################################################
 #Define scorer dimension
@@ -281,21 +280,20 @@ d:Ge/Scorer10/RotZ = 0. deg
 s:Ge/Scorer10/Color = "red"
 s:Ge/Scorer10/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase10/Quantity                              = "PhaseSpace"
-s:Sc/Phase10/Surface                               = "Scorer10/ZminusSurface"
-b:Sc/Phase10/OutputToConsole                       = "True"
-s:Sc/Phase10/OutputType                            = "ASCII"
-s:Sc/Phase10/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase0/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase10/IncludeRunID = "True"
-b:Sc/Phase10/IncludeEventID = "True"
-b:Sc/Phase10/IncludeTrackID = "True"
-b:Sc/Phase10/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase10/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase10/OutputFile = "./do_field/10"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_10/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_10/Quantity = "ProtonLET"
+s:Sc/LET_10/Component = "Scorer10"
+s:Sc/LET_10/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_10/OutputType = "csv"
+s:Sc/LET_10/OutputFile = "./do_field/LET/10"
 
+#Scoring Dose
+s:Sc/Dose_10/Quantity = "DoseToWater"
+s:Sc/Dose_10/Component = "Scorer10"
+s:Sc/Dose_10/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_10/OutputType = "csv"
+s:Sc/Dose_10/OutputFile = "./do_field/Dose/10"
 
 ### SCORER 20 mm ############################################################################################
 #Define scorer position
@@ -319,20 +317,20 @@ d:Ge/Scorer20/RotZ = 0. deg
 s:Ge/Scorer20/Color = "red"
 s:Ge/Scorer20/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase20/Quantity                              = "PhaseSpace"
-s:Sc/Phase20/Surface                               = "Scorer20/ZminusSurface"
-b:Sc/Phase20/OutputToConsole                       = "True"
-s:Sc/Phase20/OutputType                            = "ASCII"
-s:Sc/Phase20/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase20/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase20/IncludeRunID = "True"
-b:Sc/Phase20/IncludeEventID = "True"
-b:Sc/Phase20/IncludeTrackID = "True"
-b:Sc/Phase20/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase20/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase20/OutputFile = "./do_field/20"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_20/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_20/Quantity = "ProtonLET"
+s:Sc/LET_20/Component = "Scorer20"
+s:Sc/LET_20/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_20/OutputType = "csv"
+s:Sc/LET_20/OutputFile = "./do_field/LET/20"
+
+#Scoring Dose
+s:Sc/Dose_20/Quantity = "DoseToWater"
+s:Sc/Dose_20/Component = "Scorer20"
+s:Sc/Dose_20/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_20/OutputType = "csv"
+s:Sc/Dose_20/OutputFile = "./do_field/Dose/20"
 
 ### SCORER 30 mm ############################################################################################
 #Define scorer position
@@ -356,20 +354,20 @@ d:Ge/Scorer30/RotZ = 0. deg
 s:Ge/Scorer30/Color = "red"
 s:Ge/Scorer30/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase30/Quantity                              = "PhaseSpace"
-s:Sc/Phase30/Surface                               = "Scorer30/ZminusSurface"
-b:Sc/Phase30/OutputToConsole                       = "True"
-s:Sc/Phase30/OutputType                            = "ASCII"
-s:Sc/Phase30/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase0/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase30/IncludeRunID = "True"
-b:Sc/Phase30/IncludeEventID = "True"
-b:Sc/Phase30/IncludeTrackID = "True"
-b:Sc/Phase30/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase30/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase30/OutputFile = "./do_field/30"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_30/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_30/Quantity = "ProtonLET"
+s:Sc/LET_30/Component = "Scorer30"
+s:Sc/LET_30/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_30/OutputType = "csv"
+s:Sc/LET_30/OutputFile = "./do_field/LET/30"
+
+#Scoring Dose
+s:Sc/Dose_30/Quantity = "DoseToWater"
+s:Sc/Dose_30/Component = "Scorer30"
+s:Sc/Dose_30/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_30/OutputType = "csv"
+s:Sc/Dose_30/OutputFile = "./do_field/Dose/30"
 
 ### SCORER 32 mm ############################################################################################
 #Define scorer position
@@ -393,20 +391,20 @@ d:Ge/Scorer32/RotZ = 0. deg
 s:Ge/Scorer32/Color = "red"
 s:Ge/Scorer32/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase32/Quantity                              = "PhaseSpace"
-s:Sc/Phase32/Surface                               = "Scorer32/ZminusSurface"
-b:Sc/Phase32/OutputToConsole                       = "True"
-s:Sc/Phase32/OutputType                            = "ASCII"
-s:Sc/Phase32/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase0/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase32/IncludeRunID = "True"
-b:Sc/Phase32/IncludeEventID = "True"
-b:Sc/Phase32/IncludeTrackID = "True"
-b:Sc/Phase32/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase32/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase32/OutputFile = "./do_field/32"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_32/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_32/Quantity = "ProtonLET"
+s:Sc/LET_32/Component = "Scorer32"
+s:Sc/LET_32/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_32/OutputType = "csv"
+s:Sc/LET_32/OutputFile = "./do_field/LET/32"
+
+#Scoring Dose
+s:Sc/Dose_32/Quantity = "DoseToWater"
+s:Sc/Dose_32/Component = "Scorer32"
+s:Sc/Dose_32/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_32/OutputType = "csv"
+s:Sc/Dose_32/OutputFile = "./do_field/Dose/32"
 
 ### SCORER 34 mm ############################################################################################
 #Define scorer position
@@ -430,20 +428,20 @@ d:Ge/Scorer34/RotZ = 0. deg
 s:Ge/Scorer34/Color = "red"
 s:Ge/Scorer34/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase34/Quantity                              = "PhaseSpace"
-s:Sc/Phase34/Surface                               = "Scorer34/ZminusSurface"
-b:Sc/Phase34/OutputToConsole                       = "True"
-s:Sc/Phase34/OutputType                            = "ASCII"
-s:Sc/Phase34/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase0/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase34/IncludeRunID = "True"
-b:Sc/Phase34/IncludeEventID = "True"
-b:Sc/Phase34/IncludeTrackID = "True"
-b:Sc/Phase34/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase34/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase34/OutputFile = "./do_field/34"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_34/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_34/Quantity = "ProtonLET"
+s:Sc/LET_34/Component = "Scorer34"
+s:Sc/LET_34/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_34/OutputType = "csv"
+s:Sc/LET_34/OutputFile = "./do_field/LET/34"
+
+#Scoring Dose
+s:Sc/Dose_34/Quantity = "DoseToWater"
+s:Sc/Dose_34/Component = "Scorer34"
+s:Sc/Dose_34/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_34/OutputType = "csv"
+s:Sc/Dose_34/OutputFile = "./do_field/Dose/34"
 
 ### SCORER 36 mm ############################################################################################
 #Define scorer position
@@ -467,20 +465,20 @@ d:Ge/Scorer36/RotZ = 0. deg
 s:Ge/Scorer36/Color = "red"
 s:Ge/Scorer36/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase36/Quantity                              = "PhaseSpace"
-s:Sc/Phase36/Surface                               = "Scorer36/ZminusSurface"
-b:Sc/Phase36/OutputToConsole                       = "True"
-s:Sc/Phase36/OutputType                            = "ASCII"
-s:Sc/Phase36/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase36/IncludeRunID = "True"
-b:Sc/Phase36/IncludeEventID = "True"
-b:Sc/Phase36/IncludeTrackID = "True"
-b:Sc/Phase36/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase36/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase36/OutputFile = "./do_field/36"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_36/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_36/Quantity = "ProtonLET"
+s:Sc/LET_36/Component = "Scorer36"
+s:Sc/LET_36/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_36/OutputType = "csv"
+s:Sc/LET_36/OutputFile = "./do_field/LET/36"
+
+#Scoring Dose
+s:Sc/Dose_36/Quantity = "DoseToWater"
+s:Sc/Dose_36/Component = "Scorer36"
+s:Sc/Dose_36/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_36/OutputType = "csv"
+s:Sc/Dose_36/OutputFile = "./do_field/Dose/36"
 
 ### SCORER 38 mm ############################################################################################
 #Define scorer position
@@ -504,20 +502,20 @@ d:Ge/Scorer38/RotZ = 0. deg
 s:Ge/Scorer38/Color = "red"
 s:Ge/Scorer38/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase38/Quantity                              = "PhaseSpace"
-s:Sc/Phase38/Surface                               = "Scorer38/ZminusSurface"
-b:Sc/Phase38/OutputToConsole                       = "True"
-s:Sc/Phase38/OutputType                            = "ASCII"
-s:Sc/Phase38/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase38/IncludeRunID = "True"
-b:Sc/Phase38/IncludeEventID = "True"
-b:Sc/Phase38/IncludeTrackID = "True"
-b:Sc/Phase38/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase38/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase38/OutputFile = "./do_field/38"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_38/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_38/Quantity = "ProtonLET"
+s:Sc/LET_38/Component = "Scorer38"
+s:Sc/LET_38/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_38/OutputType = "csv"
+s:Sc/LET_38/OutputFile = "./do_field/LET/38"
+
+#Scoring Dose
+s:Sc/Dose_38/Quantity = "DoseToWater"
+s:Sc/Dose_38/Component = "Scorer38"
+s:Sc/Dose_38/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_38/OutputType = "csv"
+s:Sc/Dose_38/OutputFile = "./do_field/Dose/38"
 
 ### SCORER 40 mm ############################################################################################
 #Define scorer position
@@ -541,21 +539,20 @@ d:Ge/Scorer40/RotZ = 0. deg
 s:Ge/Scorer40/Color = "red"
 s:Ge/Scorer40/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase40/Quantity                              = "PhaseSpace"
-s:Sc/Phase40/Surface                               = "Scorer40/ZminusSurface"
-b:Sc/Phase40/OutputToConsole                       = "True"
-s:Sc/Phase40/OutputType                            = "ASCII"
-s:Sc/Phase40/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase6/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase40/IncludeRunID = "True"
-b:Sc/Phase40/IncludeEventID = "True"
-b:Sc/Phase40/IncludeTrackID = "True"
-b:Sc/Phase40/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase40/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase40/OutputFile = "./do_field/40"
-s:Sc/Phase40/IncludeEmptyHistories = "None"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_40/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_40/Quantity = "ProtonLET"
+s:Sc/LET_40/Component = "Scorer40"
+s:Sc/LET_40/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_40/OutputType = "csv"
+s:Sc/LET_40/OutputFile = "./do_field/LET/40"
+
+#Scoring Dose
+s:Sc/Dose_40/Quantity = "DoseToWater"
+s:Sc/Dose_40/Component = "Scorer40"
+s:Sc/Dose_40/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_40/OutputType = "csv"
+s:Sc/Dose_40/OutputFile = "./do_field/Dose/40"
 
 ### SCORER 42 mm ############################################################################################
 #Define scorer position
@@ -579,21 +576,20 @@ d:Ge/Scorer42/RotZ = 0. deg
 s:Ge/Scorer42/Color = "red"
 s:Ge/Scorer42/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase42/Quantity                              = "PhaseSpace"
-s:Sc/Phase42/Surface                               = "Scorer42/ZminusSurface"
-b:Sc/Phase42/OutputToConsole                       = "True"
-s:Sc/Phase42/OutputType                            = "ASCII"
-s:Sc/Phase42/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase42/IncludeRunID = "True"
-b:Sc/Phase42/IncludeEventID = "True"
-b:Sc/Phase42/IncludeTrackID = "True"
-b:Sc/Phase42/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase42/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase42/OutputFile = "./do_field/42"
-s:Sc/Phase42/IncludeEmptyHistories = "None"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_42/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_42/Quantity = "ProtonLET"
+s:Sc/LET_42/Component = "Scorer42"
+s:Sc/LET_42/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_42/OutputType = "csv"
+s:Sc/LET_42/OutputFile = "./do_field/LET/42"
+
+#Scoring Dose
+s:Sc/Dose_42/Quantity = "DoseToWater"
+s:Sc/Dose_42/Component = "Scorer42"
+s:Sc/Dose_42/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_42/OutputType = "csv"
+s:Sc/Dose_42/OutputFile = "./do_field/Dose/42"
 
 ### SCORER 44 mm ############################################################################################
 #Define scorer position
@@ -617,21 +613,20 @@ d:Ge/Scorer44/RotZ = 0. deg
 s:Ge/Scorer44/Color = "red"
 s:Ge/Scorer44/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase44/Quantity                              = "PhaseSpace"
-s:Sc/Phase44/Surface                               = "Scorer44/ZminusSurface"
-b:Sc/Phase44/OutputToConsole                       = "True"
-s:Sc/Phase44/OutputType                            = "ASCII"
-s:Sc/Phase44/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase44/IncludeRunID = "True"
-b:Sc/Phase44/IncludeEventID = "True"
-b:Sc/Phase44/IncludeTrackID = "True"
-b:Sc/Phase44/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase44/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase44/OutputFile = "./do_field/44"
-s:Sc/Phase44/IncludeEmptyHistories = "None"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_44/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_44/Quantity = "ProtonLET"
+s:Sc/LET_44/Component = "Scorer44"
+s:Sc/LET_44/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_44/OutputType = "csv"
+s:Sc/LET_44/OutputFile = "./do_field/LET/44"
+
+#Scoring Dose
+s:Sc/Dose_44/Quantity = "DoseToWater"
+s:Sc/Dose_44/Component = "Scorer44"
+s:Sc/Dose_44/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_44/OutputType = "csv"
+s:Sc/Dose_44/OutputFile = "./do_field/Dose/44"
 
 ### SCORER 45 mm ############################################################################################
 #Define scorer position
@@ -655,21 +650,21 @@ d:Ge/Scorer45/RotZ = 0. deg
 s:Ge/Scorer45/Color = "red"
 s:Ge/Scorer45/DrawingStyle = "Solid"
 
-#Scoring phase space
-s:Sc/Phase45/Quantity                              = "PhaseSpace"
-s:Sc/Phase45/Surface                               = "Scorer45/ZminusSurface"
-b:Sc/Phase45/OutputToConsole                       = "True"
-s:Sc/Phase45/OutputType                            = "ASCII"
-s:Sc/Phase45/IfOutputFileAlreadyExists             = "Overwrite"
-#s:Sc/Phase/OnlyIncludeParticlesGoing             = "Out"
-#sv:Sc/Phase0/OnlyIncludeParticlesNamed           = 1 "proton"
-b:Sc/Phase45/IncludeRunID = "True"
-b:Sc/Phase45/IncludeEventID = "True"
-b:Sc/Phase45/IncludeTrackID = "True"
-b:Sc/Phase45/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase45/WeightBy = "Track" # defaults to "Dose"
-s:Sc/Phase45/OutputFile = "./do_field/45"
-s:Sc/Phase45/IncludeEmptyHistories = "None"
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_45/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_45/Quantity = "ProtonLET"
+s:Sc/LET_45/Component = "Scorer45"
+s:Sc/LET_45/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_45/OutputType = "csv"
+s:Sc/LET_45/OutputFile = "./do_field/LET/45"
+
+#Scoring Dose
+s:Sc/Dose_45/Quantity = "DoseToWater"
+s:Sc/Dose_45/Component = "Scorer45"
+s:Sc/Dose_45/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_45/OutputType = "csv"
+s:Sc/Dose_45/OutputFile = "./do_field/Dose/45"
+
 
 #####################################################################################################################
 ############################################### BEAM DEFINITION #####################################################

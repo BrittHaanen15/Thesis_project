@@ -3,7 +3,7 @@
 #####################################################################################################################
 
 #Number of particles to simulate CAN CHANGE THIS
-i:NrHistories = 500000
+i:NrHistories = 100000
 
 #Amount of solid water added to setup on top of nozzle CAN CHANGE THIS
 d:SolidWaterAdded = 45.5 mm
@@ -250,7 +250,7 @@ b:Sc/Phase0/IncludeRunID = "True"
 b:Sc/Phase0/IncludeEventID = "True"
 b:Sc/Phase0/IncludeTrackID = "True"
 b:Sc/Phase0/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase0/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase0/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase0/OutputFile = "./do_field/0"
 s:Sc/Phase0/IncludeEmptyHistories = "None"
 
@@ -293,7 +293,7 @@ b:Sc/Phase10/IncludeRunID = "True"
 b:Sc/Phase10/IncludeEventID = "True"
 b:Sc/Phase10/IncludeTrackID = "True"
 b:Sc/Phase10/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase10/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase10/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase10/OutputFile = "./do_field/10"
 
 
@@ -331,7 +331,7 @@ b:Sc/Phase20/IncludeRunID = "True"
 b:Sc/Phase20/IncludeEventID = "True"
 b:Sc/Phase20/IncludeTrackID = "True"
 b:Sc/Phase20/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase20/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase20/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase20/OutputFile = "./do_field/20"
 
 ### SCORER 30 mm ############################################################################################
@@ -368,7 +368,7 @@ b:Sc/Phase30/IncludeRunID = "True"
 b:Sc/Phase30/IncludeEventID = "True"
 b:Sc/Phase30/IncludeTrackID = "True"
 b:Sc/Phase30/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase30/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase30/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase30/OutputFile = "./do_field/30"
 
 ### SCORER 32 mm ############################################################################################
@@ -405,7 +405,7 @@ b:Sc/Phase32/IncludeRunID = "True"
 b:Sc/Phase32/IncludeEventID = "True"
 b:Sc/Phase32/IncludeTrackID = "True"
 b:Sc/Phase32/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase32/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase32/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase32/OutputFile = "./do_field/32"
 
 ### SCORER 33 mm ############################################################################################
@@ -442,7 +442,7 @@ b:Sc/Phase33/IncludeRunID = "True"
 b:Sc/Phase33/IncludeEventID = "True"
 b:Sc/Phase33/IncludeTrackID = "True"
 b:Sc/Phase33/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase33/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase33/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase33/OutputFile = "./do_field/33"
 
 ### SCORER 34 mm ############################################################################################
@@ -479,7 +479,7 @@ b:Sc/Phase34/IncludeRunID = "True"
 b:Sc/Phase34/IncludeEventID = "True"
 b:Sc/Phase34/IncludeTrackID = "True"
 b:Sc/Phase34/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase34/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase34/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase34/OutputFile = "./do_field/34"
 
 ### SCORER 35 mm ############################################################################################
@@ -516,7 +516,7 @@ b:Sc/Phase35/IncludeRunID = "True"
 b:Sc/Phase35/IncludeEventID = "True"
 b:Sc/Phase35/IncludeTrackID = "True"
 b:Sc/Phase35/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase35/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase35/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase35/OutputFile = "./do_field/35"
 
 ### SCORER 35.5 mm ############################################################################################
@@ -553,7 +553,7 @@ b:Sc/Phase355/IncludeRunID = "True"
 b:Sc/Phase355/IncludeEventID = "True"
 b:Sc/Phase355/IncludeTrackID = "True"
 b:Sc/Phase355/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase355/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase355/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase355/OutputFile = "./do_field/35.5"
 
 ### SCORER 36 mm ############################################################################################
@@ -590,7 +590,7 @@ b:Sc/Phase36/IncludeRunID = "True"
 b:Sc/Phase36/IncludeEventID = "True"
 b:Sc/Phase36/IncludeTrackID = "True"
 b:Sc/Phase36/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase36/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase36/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase36/OutputFile = "./do_field/36"
 
 ### SCORER 36.5 mm ############################################################################################
@@ -627,7 +627,7 @@ b:Sc/Phase365/IncludeRunID = "True"
 b:Sc/Phase365/IncludeEventID = "True"
 b:Sc/Phase365/IncludeTrackID = "True"
 b:Sc/Phase365/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase365/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase365/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase365/OutputFile = "./do_field/36.5"
 
 
@@ -665,7 +665,7 @@ b:Sc/Phase37/IncludeRunID = "True"
 b:Sc/Phase37/IncludeEventID = "True"
 b:Sc/Phase37/IncludeTrackID = "True"
 b:Sc/Phase37/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase37/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase37/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase37/OutputFile = "./do_field/37"
 
 ### SCORER 37.5 mm ############################################################################################
@@ -702,7 +702,7 @@ b:Sc/Phase375/IncludeRunID = "True"
 b:Sc/Phase375/IncludeEventID = "True"
 b:Sc/Phase375/IncludeTrackID = "True"
 b:Sc/Phase375/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase375/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase375/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase375/OutputFile = "./do_field/37.5"
 
 
@@ -740,7 +740,7 @@ b:Sc/Phase38/IncludeRunID = "True"
 b:Sc/Phase38/IncludeEventID = "True"
 b:Sc/Phase38/IncludeTrackID = "True"
 b:Sc/Phase38/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase38/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase38/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase38/OutputFile = "./do_field/38"
 
 ### SCORER 38.5 mm ############################################################################################
@@ -777,7 +777,7 @@ b:Sc/Phase385/IncludeRunID = "True"
 b:Sc/Phase385/IncludeEventID = "True"
 b:Sc/Phase385/IncludeTrackID = "True"
 b:Sc/Phase385/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase385/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase385/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase385/OutputFile = "./do_field/38.5"
 
 ### SCORER 39 mm ############################################################################################
@@ -814,7 +814,7 @@ b:Sc/Phase39/IncludeRunID = "True"
 b:Sc/Phase39/IncludeEventID = "True"
 b:Sc/Phase39/IncludeTrackID = "True"
 b:Sc/Phase39/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase39/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase39/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase39/OutputFile = "./do_field/39"
 
 ### SCORER 39.5 mm ############################################################################################
@@ -851,7 +851,7 @@ b:Sc/Phase395/IncludeRunID = "True"
 b:Sc/Phase395/IncludeEventID = "True"
 b:Sc/Phase395/IncludeTrackID = "True"
 b:Sc/Phase395/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase395/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase395/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase395/OutputFile = "./do_field/39.5"
 
 ### SCORER 40 mm ############################################################################################
@@ -888,7 +888,7 @@ b:Sc/Phase40/IncludeRunID = "True"
 b:Sc/Phase40/IncludeEventID = "True"
 b:Sc/Phase40/IncludeTrackID = "True"
 b:Sc/Phase40/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase40/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase40/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase40/OutputFile = "./do_field/40"
 s:Sc/Phase40/IncludeEmptyHistories = "None"
 
@@ -926,7 +926,7 @@ b:Sc/Phase405/IncludeRunID = "True"
 b:Sc/Phase405/IncludeEventID = "True"
 b:Sc/Phase405/IncludeTrackID = "True"
 b:Sc/Phase405/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase405/OutputFile = "./do_field/40.5"
 s:Sc/Phase405/IncludeEmptyHistories = "None"
 
@@ -964,7 +964,7 @@ b:Sc/Phase41/IncludeRunID = "True"
 b:Sc/Phase41/IncludeEventID = "True"
 b:Sc/Phase41/IncludeTrackID = "True"
 b:Sc/Phase41/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase41/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase41/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase41/OutputFile = "./do_field/41"
 s:Sc/Phase41/IncludeEmptyHistories = "None"
 
@@ -1002,7 +1002,7 @@ b:Sc/Phase415/IncludeRunID = "True"
 b:Sc/Phase415/IncludeEventID = "True"
 b:Sc/Phase415/IncludeTrackID = "True"
 b:Sc/Phase415/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase415/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase415/OutputFile = "./do_field/41.5"
 s:Sc/Phase415/IncludeEmptyHistories = "None"
 
@@ -1040,7 +1040,7 @@ b:Sc/Phase42/IncludeRunID = "True"
 b:Sc/Phase42/IncludeEventID = "True"
 b:Sc/Phase42/IncludeTrackID = "True"
 b:Sc/Phase42/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase42/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase42/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase42/OutputFile = "./do_field/42"
 s:Sc/Phase42/IncludeEmptyHistories = "None"
 
@@ -1078,7 +1078,7 @@ b:Sc/Phase425/IncludeRunID = "True"
 b:Sc/Phase425/IncludeEventID = "True"
 b:Sc/Phase425/IncludeTrackID = "True"
 b:Sc/Phase425/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase425/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase425/OutputFile = "./do_field/42.5"
 s:Sc/Phase425/IncludeEmptyHistories = "None"
 
@@ -1116,7 +1116,7 @@ b:Sc/Phase43/IncludeRunID = "True"
 b:Sc/Phase43/IncludeEventID = "True"
 b:Sc/Phase43/IncludeTrackID = "True"
 b:Sc/Phase43/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase43/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase43/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase43/OutputFile = "./do_field/43"
 s:Sc/Phase43/IncludeEmptyHistories = "None"
 
@@ -1154,7 +1154,7 @@ b:Sc/Phase435/IncludeRunID = "True"
 b:Sc/Phase435/IncludeEventID = "True"
 b:Sc/Phase435/IncludeTrackID = "True"
 b:Sc/Phase435/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase435/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase435/OutputFile = "./do_field/43.5"
 s:Sc/Phase435/IncludeEmptyHistories = "None"
 
@@ -1192,7 +1192,7 @@ b:Sc/Phase44/IncludeRunID = "True"
 b:Sc/Phase44/IncludeEventID = "True"
 b:Sc/Phase44/IncludeTrackID = "True"
 b:Sc/Phase44/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase44/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase44/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase44/OutputFile = "./do_field/44"
 s:Sc/Phase44/IncludeEmptyHistories = "None"
 
@@ -1230,7 +1230,7 @@ b:Sc/Phase445/IncludeRunID = "True"
 b:Sc/Phase445/IncludeEventID = "True"
 b:Sc/Phase445/IncludeTrackID = "True"
 b:Sc/Phase445/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase405/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase445/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase445/OutputFile = "./do_field/44.5"
 s:Sc/Phase445/IncludeEmptyHistories = "None"
 
@@ -1268,7 +1268,7 @@ b:Sc/Phase45/IncludeRunID = "True"
 b:Sc/Phase45/IncludeEventID = "True"
 b:Sc/Phase45/IncludeTrackID = "True"
 b:Sc/Phase45/IncludeVertexInfo = "True" # Initial KE, Position and Momentum
-#s:Sc/Phase45/WeightBy = "Track" # defaults to "Dose"
+s:Sc/Phase45/WeightBy = "Track" # defaults to "Dose"
 s:Sc/Phase45/OutputFile = "./do_field/45"
 s:Sc/Phase45/IncludeEmptyHistories = "None"
 
@@ -1276,56 +1276,28 @@ s:Sc/Phase45/IncludeEmptyHistories = "None"
 ############################################### BEAM DEFINITION #####################################################
 #####################################################################################################################
 
-### MAKE A SPOT ####################################################################################################
-#Define dimensions 
-d:SpotHLX = 1.0 cm 
-d:SpotHLY = 1.0 cm 
-d:SpotHLZ = ExitWindowHLZ cm
-
-#Define position
-d:SpotTransX = 0. cm
-d:SpotTransY = 0. cm
-d:SpotTransZ = 0. cm
-
-#Define Spot
-s:Ge/Spot/Type     = "TsBox"
-s:Ge/Spot/Material = "G4_AIR"
-s:Ge/Spot/Parent   = "ExitWindow"
-d:Ge/Spot/HLX      = SpotHLX cm
-d:Ge/Spot/HLY      = SpotHLY cm
-d:Ge/Spot/HLZ      = SpotHLZ cm
-d:Ge/Spot/TransX   = SpotTransX cm
-d:Ge/Spot/TransY   = SpotTransY cm
-d:Ge/Spot/TransZ   = SpotTransZ cm
-d:Ge/Spot/RotX     = 0. deg
-d:Ge/Spot/RotY     = 0. deg
-d:Ge/Spot/RotZ     = 0. deg
-s:Ge/Spot/Color    = "yellow"
-s:Ge/Spot/DrawingStyle = "Solid"
-
-
 
 ### BEAM ITSELF #####################################################################################################
 #Defining Beam
 s:So/Example/Type                     = "Beam"
 s:So/Example/Component                = "BeamPosition"
 s:So/Example/BeamParticle             = "proton"
-d:So/Example/BeamEnergy               = 69.0 MeV
+d:So/Example/BeamEnergy               = 69.87 MeV
 u:So/Example/BeamEnergySpread         = 0.757504
-s:So/Example/BeamPositionDistribution = "None"
-s:So/Example/BeamPositionCutoffShape  = "Ellipse"
-d:So/Example/BeamPositionCutoffX      = 12.5 cm
-d:So/Example/BeamPositionCutoffY      = 12.5 cm
+s:So/Example/BeamPositionDistribution = "Flat"
+s:So/Example/BeamPositionCutoffShape  = "Rectangle"
+d:So/Example/BeamPositionCutoffX      = 0.5 * ExitWindowHLX cm
+d:So/Example/BeamPositionCutoffY      = 0.5 * ExitWindowHLY cm
 #d:So/Example/BeamPositionSpreadX      = 0.05 cm
 #d:So/Example/BeamPositionSpreadY      = 0.05 cm
 s:So/Example/BeamAngularDistribution  = "Flat"
-d:So/Example/BeamAngularCutoffX       = 10. deg
-d:So/Example/BeamAngularCutoffY       = 10. deg
+d:So/Example/BeamAngularCutoffX       = 1. deg
+d:So/Example/BeamAngularCutoffY       = 1. deg
 #d:So/Example/BeamAngularSpreadX       = 0.0032 rad
 #d:So/Example/BeamAngularSpreadY       = 0.0032 rad
 i:So/Example/NumberOfHistoriesInRun   = NrHistories
 
-s:Ge/BeamPosition/Parent="Spot"
+s:Ge/BeamPosition/Parent="ExitWindow"
 s:Ge/BeamPosition/Type="Group"
 d:Ge/BeamPosition/TransX=0. m
 d:Ge/BeamPosition/TransY=0. m

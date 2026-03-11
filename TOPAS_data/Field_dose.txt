@@ -3,7 +3,7 @@
 #####################################################################################################################
 
 #Number of particles to simulate CAN CHANGE THIS
-i:NrHistories = 10000
+i:NrHistories = 100000
 
 #Amount of solid water added to setup on top of nozzle CAN CHANGE THIS
 d:SolidWaterAdded = 45.5 mm
@@ -480,6 +480,117 @@ s:Sc/Dose_36/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_36/OutputType = "csv"
 s:Sc/Dose_36/OutputFile = "./do_field/Dose/36"
 
+### SCORER 36.5 mm ############################################################################################
+#Define scorer position
+d:Scorer365TransX = 0. cm
+d:Scorer365TransY = 0. cm
+d:Scorer365TransZ = Scorer0TransZ + 3.65 cm
+
+#Define scorer
+s:Ge/Scorer365/Type = "TsBox"
+s:Ge/Scorer365/Parent = "SolidWater"
+s:Ge/Scorer365/Material = "G4_WATER"
+d:Ge/Scorer365/HLX = Scorer0HLX cm
+d:Ge/Scorer365/HLY = Scorer0HLY cm
+d:Ge/Scorer365/HLZ = Scorer0HLZ cm
+d:Ge/Scorer365/TransX = Scorer0TransX cm
+d:Ge/Scorer365/TransY = Scorer0TransY cm
+d:Ge/Scorer365/TransZ = Scorer365TransZ cm
+d:Ge/Scorer365/RotX = 0. deg
+d:Ge/Scorer365/RotY = 0. deg
+d:Ge/Scorer365/RotZ = 0. deg
+s:Ge/Scorer365/Color = "red"
+s:Ge/Scorer365/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_365/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_365/Quantity = "ProtonLET"
+s:Sc/LET_365/Component = "Scorer365"
+s:Sc/LET_365/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_365/OutputType = "csv"
+s:Sc/LET_365/OutputFile = "./do_field/LET/36.5"
+
+#Scoring Dose
+s:Sc/Dose_365/Quantity = "DoseToWater"
+s:Sc/Dose_365/Component = "Scorer365"
+s:Sc/Dose_365/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_365/OutputType = "csv"
+s:Sc/Dose_365/OutputFile = "./do_field/Dose/36.5"
+
+### SCORER 37 mm ############################################################################################
+#Define scorer position
+d:Scorer37TransX = 0. cm
+d:Scorer37TransY = 0. cm
+d:Scorer37TransZ = Scorer0TransZ + 3.7 cm
+
+#Define scorer
+s:Ge/Scorer37/Type = "TsBox"
+s:Ge/Scorer37/Parent = "SolidWater"
+s:Ge/Scorer37/Material = "G4_WATER"
+d:Ge/Scorer37/HLX = Scorer0HLX cm
+d:Ge/Scorer37/HLY = Scorer0HLY cm
+d:Ge/Scorer37/HLZ = Scorer0HLZ cm
+d:Ge/Scorer37/TransX = Scorer0TransX cm
+d:Ge/Scorer37/TransY = Scorer0TransY cm
+d:Ge/Scorer37/TransZ = Scorer37TransZ cm
+d:Ge/Scorer37/RotX = 0. deg
+d:Ge/Scorer37/RotY = 0. deg
+d:Ge/Scorer37/RotZ = 0. deg
+s:Ge/Scorer37/Color = "red"
+s:Ge/Scorer37/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_37/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_37/Quantity = "ProtonLET"
+s:Sc/LET_37/Component = "Scorer37"
+s:Sc/LET_37/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_37/OutputType = "csv"
+s:Sc/LET_37/OutputFile = "./do_field/LET/37"
+
+#Scoring Dose
+s:Sc/Dose_37/Quantity = "DoseToWater"
+s:Sc/Dose_37/Component = "Scorer37"
+s:Sc/Dose_37/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_37/OutputType = "csv"
+s:Sc/Dose_37/OutputFile = "./do_field/Dose/37"
+
+### SCORER 37.5 mm ############################################################################################
+#Define scorer position
+d:Scorer375TransX = 0. cm
+d:Scorer375TransY = 0. cm
+d:Scorer375TransZ = Scorer0TransZ + 3.75 cm
+
+#Define scorer
+s:Ge/Scorer375/Type = "TsBox"
+s:Ge/Scorer375/Parent = "SolidWater"
+s:Ge/Scorer375/Material = "G4_WATER"
+d:Ge/Scorer375/HLX = Scorer0HLX cm
+d:Ge/Scorer375/HLY = Scorer0HLY cm
+d:Ge/Scorer375/HLZ = Scorer0HLZ cm
+d:Ge/Scorer375/TransX = Scorer0TransX cm
+d:Ge/Scorer375/TransY = Scorer0TransY cm
+d:Ge/Scorer375/TransZ = Scorer375TransZ cm
+d:Ge/Scorer375/RotX = 0. deg
+d:Ge/Scorer375/RotY = 0. deg
+d:Ge/Scorer375/RotZ = 0. deg
+s:Ge/Scorer375/Color = "red"
+s:Ge/Scorer375/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_375/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_375/Quantity = "ProtonLET"
+s:Sc/LET_375/Component = "Scorer375"
+s:Sc/LET_375/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_375/OutputType = "csv"
+s:Sc/LET_375/OutputFile = "./do_field/LET/37.5"
+
+#Scoring Dose
+s:Sc/Dose_375/Quantity = "DoseToWater"
+s:Sc/Dose_375/Component = "Scorer375"
+s:Sc/Dose_375/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_375/OutputType = "csv"
+s:Sc/Dose_375/OutputFile = "./do_field/Dose/37.5"
+
 ### SCORER 38 mm ############################################################################################
 #Define scorer position
 d:Scorer38TransX = 0. cm
@@ -516,6 +627,339 @@ s:Sc/Dose_38/Component = "Scorer38"
 s:Sc/Dose_38/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_38/OutputType = "csv"
 s:Sc/Dose_38/OutputFile = "./do_field/Dose/38"
+
+### SCORER 38.5 mm ############################################################################################
+#Define scorer position
+d:Scorer385TransX = 0. cm
+d:Scorer385TransY = 0. cm
+d:Scorer385TransZ = Scorer0TransZ + 3.85 cm
+
+#Define scorer
+s:Ge/Scorer385/Type = "TsBox"
+s:Ge/Scorer385/Parent = "SolidWater"
+s:Ge/Scorer385/Material = "G4_WATER"
+d:Ge/Scorer385/HLX = Scorer0HLX cm
+d:Ge/Scorer385/HLY = Scorer0HLY cm
+d:Ge/Scorer385/HLZ = Scorer0HLZ cm
+d:Ge/Scorer385/TransX = Scorer0TransX cm
+d:Ge/Scorer385/TransY = Scorer0TransY cm
+d:Ge/Scorer385/TransZ = Scorer385TransZ cm
+d:Ge/Scorer385/RotX = 0. deg
+d:Ge/Scorer385/RotY = 0. deg
+d:Ge/Scorer385/RotZ = 0. deg
+s:Ge/Scorer385/Color = "red"
+s:Ge/Scorer385/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_385/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_385/Quantity = "ProtonLET"
+s:Sc/LET_385/Component = "Scorer385"
+s:Sc/LET_385/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_385/OutputType = "csv"
+s:Sc/LET_385/OutputFile = "./do_field/LET/38.5"
+
+#Scoring Dose
+s:Sc/Dose_385/Quantity = "DoseToWater"
+s:Sc/Dose_385/Component = "Scorer385"
+s:Sc/Dose_385/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_385/OutputType = "csv"
+s:Sc/Dose_385/OutputFile = "./do_field/Dose/38.5"
+
+### SCORER 38.6 mm ############################################################################################
+#Define scorer position
+d:Scorer386TransX = 0. cm
+d:Scorer386TransY = 0. cm
+d:Scorer386TransZ = Scorer0TransZ + 3.86 cm
+
+#Define scorer
+s:Ge/Scorer386/Type = "TsBox"
+s:Ge/Scorer386/Parent = "SolidWater"
+s:Ge/Scorer386/Material = "G4_WATER"
+d:Ge/Scorer386/HLX = Scorer0HLX cm
+d:Ge/Scorer386/HLY = Scorer0HLY cm
+d:Ge/Scorer386/HLZ = Scorer0HLZ cm
+d:Ge/Scorer386/TransX = Scorer0TransX cm
+d:Ge/Scorer386/TransY = Scorer0TransY cm
+d:Ge/Scorer386/TransZ = Scorer386TransZ cm
+d:Ge/Scorer386/RotX = 0. deg
+d:Ge/Scorer386/RotY = 0. deg
+d:Ge/Scorer386/RotZ = 0. deg
+s:Ge/Scorer386/Color = "red"
+s:Ge/Scorer386/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_386/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_386/Quantity = "ProtonLET"
+s:Sc/LET_386/Component = "Scorer386"
+s:Sc/LET_386/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_386/OutputType = "csv"
+s:Sc/LET_386/OutputFile = "./do_field/LET/38.6"
+
+#Scoring Dose
+s:Sc/Dose_386/Quantity = "DoseToWater"
+s:Sc/Dose_386/Component = "Scorer386"
+s:Sc/Dose_386/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_386/OutputType = "csv"
+s:Sc/Dose_386/OutputFile = "./do_field/Dose/38.6"
+
+### SCORER 38.8 mm ############################################################################################
+#Define scorer position
+d:Scorer388TransX = 0. cm
+d:Scorer388TransY = 0. cm
+d:Scorer388TransZ = Scorer0TransZ + 3.88 cm
+
+#Define scorer
+s:Ge/Scorer388/Type = "TsBox"
+s:Ge/Scorer388/Parent = "SolidWater"
+s:Ge/Scorer388/Material = "G4_WATER"
+d:Ge/Scorer388/HLX = Scorer0HLX cm
+d:Ge/Scorer388/HLY = Scorer0HLY cm
+d:Ge/Scorer388/HLZ = Scorer0HLZ cm
+d:Ge/Scorer388/TransX = Scorer0TransX cm
+d:Ge/Scorer388/TransY = Scorer0TransY cm
+d:Ge/Scorer388/TransZ = Scorer388TransZ cm
+d:Ge/Scorer388/RotX = 0. deg
+d:Ge/Scorer388/RotY = 0. deg
+d:Ge/Scorer388/RotZ = 0. deg
+s:Ge/Scorer388/Color = "red"
+s:Ge/Scorer388/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_388/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_388/Quantity = "ProtonLET"
+s:Sc/LET_388/Component = "Scorer388"
+s:Sc/LET_388/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_388/OutputType = "csv"
+s:Sc/LET_388/OutputFile = "./do_field/LET/38.8"
+
+#Scoring Dose
+s:Sc/Dose_388/Quantity = "DoseToWater"
+s:Sc/Dose_388/Component = "Scorer388"
+s:Sc/Dose_388/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_388/OutputType = "csv"
+s:Sc/Dose_388/OutputFile = "./do_field/Dose/38.8"
+
+### SCORER 39 mm ############################################################################################
+#Define scorer position
+d:Scorer39TransX = 0. cm
+d:Scorer39TransY = 0. cm
+d:Scorer39TransZ = Scorer0TransZ + 3.9 cm
+
+#Define scorer
+s:Ge/Scorer39/Type = "TsBox"
+s:Ge/Scorer39/Parent = "SolidWater"
+s:Ge/Scorer39/Material = "G4_WATER"
+d:Ge/Scorer39/HLX = Scorer0HLX cm
+d:Ge/Scorer39/HLY = Scorer0HLY cm
+d:Ge/Scorer39/HLZ = Scorer0HLZ cm
+d:Ge/Scorer39/TransX = Scorer0TransX cm
+d:Ge/Scorer39/TransY = Scorer0TransY cm
+d:Ge/Scorer39/TransZ = Scorer39TransZ cm
+d:Ge/Scorer39/RotX = 0. deg
+d:Ge/Scorer39/RotY = 0. deg
+d:Ge/Scorer39/RotZ = 0. deg
+s:Ge/Scorer39/Color = "red"
+s:Ge/Scorer39/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_39/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_39/Quantity = "ProtonLET"
+s:Sc/LET_39/Component = "Scorer39"
+s:Sc/LET_39/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_39/OutputType = "csv"
+s:Sc/LET_39/OutputFile = "./do_field/LET/39"
+
+#Scoring Dose
+s:Sc/Dose_39/Quantity = "DoseToWater"
+s:Sc/Dose_39/Component = "Scorer39"
+s:Sc/Dose_39/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_39/OutputType = "csv"
+s:Sc/Dose_39/OutputFile = "./do_field/Dose/39"
+
+### SCORER 39.2 mm ############################################################################################
+#Define scorer position
+d:Scorer392TransX = 0. cm
+d:Scorer392TransY = 0. cm
+d:Scorer392TransZ = Scorer0TransZ + 3.92 cm
+
+#Define scorer
+s:Ge/Scorer392/Type = "TsBox"
+s:Ge/Scorer392/Parent = "SolidWater"
+s:Ge/Scorer392/Material = "G4_WATER"
+d:Ge/Scorer392/HLX = Scorer0HLX cm
+d:Ge/Scorer392/HLY = Scorer0HLY cm
+d:Ge/Scorer392/HLZ = Scorer0HLZ cm
+d:Ge/Scorer392/TransX = Scorer0TransX cm
+d:Ge/Scorer392/TransY = Scorer0TransY cm
+d:Ge/Scorer392/TransZ = Scorer392TransZ cm
+d:Ge/Scorer392/RotX = 0. deg
+d:Ge/Scorer392/RotY = 0. deg
+d:Ge/Scorer392/RotZ = 0. deg
+s:Ge/Scorer392/Color = "red"
+s:Ge/Scorer392/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_392/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_392/Quantity = "ProtonLET"
+s:Sc/LET_392/Component = "Scorer392"
+s:Sc/LET_392/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_392/OutputType = "csv"
+s:Sc/LET_392/OutputFile = "./do_field/LET/392"
+
+#Scoring Dose
+s:Sc/Dose_392/Quantity = "DoseToWater"
+s:Sc/Dose_392/Component = "Scorer392"
+s:Sc/Dose_392/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_392/OutputType = "csv"
+s:Sc/Dose_392/OutputFile = "./do_field/Dose/392"
+
+### SCORER 39.4 mm ############################################################################################
+#Define scorer position
+d:Scorer394TransX = 0. cm
+d:Scorer394TransY = 0. cm
+d:Scorer394TransZ = Scorer0TransZ + 3.94 cm
+
+#Define scorer
+s:Ge/Scorer394/Type = "TsBox"
+s:Ge/Scorer394/Parent = "SolidWater"
+s:Ge/Scorer394/Material = "G4_WATER"
+d:Ge/Scorer394/HLX = Scorer0HLX cm
+d:Ge/Scorer394/HLY = Scorer0HLY cm
+d:Ge/Scorer394/HLZ = Scorer0HLZ cm
+d:Ge/Scorer394/TransX = Scorer0TransX cm
+d:Ge/Scorer394/TransY = Scorer0TransY cm
+d:Ge/Scorer394/TransZ = Scorer394TransZ cm
+d:Ge/Scorer394/RotX = 0. deg
+d:Ge/Scorer394/RotY = 0. deg
+d:Ge/Scorer394/RotZ = 0. deg
+s:Ge/Scorer394/Color = "red"
+s:Ge/Scorer394/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_394/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_394/Quantity = "ProtonLET"
+s:Sc/LET_394/Component = "Scorer394"
+s:Sc/LET_394/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_394/OutputType = "csv"
+s:Sc/LET_394/OutputFile = "./do_field/LET/394"
+
+#Scoring Dose
+s:Sc/Dose_394/Quantity = "DoseToWater"
+s:Sc/Dose_394/Component = "Scorer394"
+s:Sc/Dose_394/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_394/OutputType = "csv"
+s:Sc/Dose_394/OutputFile = "./do_field/Dose/394"
+
+### SCORER 39.5 mm ############################################################################################
+#Define scorer position
+d:Scorer395TransX = 0. cm
+d:Scorer395TransY = 0. cm
+d:Scorer395TransZ = Scorer0TransZ + 3.95 cm
+
+#Define scorer
+s:Ge/Scorer395/Type = "TsBox"
+s:Ge/Scorer395/Parent = "SolidWater"
+s:Ge/Scorer395/Material = "G4_WATER"
+d:Ge/Scorer395/HLX = Scorer0HLX cm
+d:Ge/Scorer395/HLY = Scorer0HLY cm
+d:Ge/Scorer395/HLZ = Scorer0HLZ cm
+d:Ge/Scorer395/TransX = Scorer0TransX cm
+d:Ge/Scorer395/TransY = Scorer0TransY cm
+d:Ge/Scorer395/TransZ = Scorer395TransZ cm
+d:Ge/Scorer395/RotX = 0. deg
+d:Ge/Scorer395/RotY = 0. deg
+d:Ge/Scorer395/RotZ = 0. deg
+s:Ge/Scorer395/Color = "red"
+s:Ge/Scorer395/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_395/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_395/Quantity = "ProtonLET"
+s:Sc/LET_395/Component = "Scorer395"
+s:Sc/LET_395/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_395/OutputType = "csv"
+s:Sc/LET_395/OutputFile = "./do_field/LET/39.5"
+
+#Scoring Dose
+s:Sc/Dose_395/Quantity = "DoseToWater"
+s:Sc/Dose_395/Component = "Scorer395"
+s:Sc/Dose_395/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_395/OutputType = "csv"
+s:Sc/Dose_395/OutputFile = "./do_field/Dose/39.5"
+
+### SCORER 39.6 mm ############################################################################################
+#Define scorer position
+d:Scorer396TransX = 0. cm
+d:Scorer396TransY = 0. cm
+d:Scorer396TransZ = Scorer0TransZ + 3.96 cm
+
+#Define scorer
+s:Ge/Scorer396/Type = "TsBox"
+s:Ge/Scorer396/Parent = "SolidWater"
+s:Ge/Scorer396/Material = "G4_WATER"
+d:Ge/Scorer396/HLX = Scorer0HLX cm
+d:Ge/Scorer396/HLY = Scorer0HLY cm
+d:Ge/Scorer396/HLZ = Scorer0HLZ cm
+d:Ge/Scorer396/TransX = Scorer0TransX cm
+d:Ge/Scorer396/TransY = Scorer0TransY cm
+d:Ge/Scorer396/TransZ = Scorer396TransZ cm
+d:Ge/Scorer396/RotX = 0. deg
+d:Ge/Scorer396/RotY = 0. deg
+d:Ge/Scorer396/RotZ = 0. deg
+s:Ge/Scorer396/Color = "red"
+s:Ge/Scorer396/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_396/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_396/Quantity = "ProtonLET"
+s:Sc/LET_396/Component = "Scorer396"
+s:Sc/LET_396/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_396/OutputType = "csv"
+s:Sc/LET_396/OutputFile = "./do_field/LET/39.6"
+
+#Scoring Dose
+s:Sc/Dose_396/Quantity = "DoseToWater"
+s:Sc/Dose_396/Component = "Scorer396"
+s:Sc/Dose_396/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_396/OutputType = "csv"
+s:Sc/Dose_396/OutputFile = "./do_field/Dose/39.6"
+
+### SCORER 39.8 mm ############################################################################################
+#Define scorer position
+d:Scorer398TransX = 0. cm
+d:Scorer398TransY = 0. cm
+d:Scorer398TransZ = Scorer0TransZ + 3.98 cm
+
+#Define scorer
+s:Ge/Scorer398/Type = "TsBox"
+s:Ge/Scorer398/Parent = "SolidWater"
+s:Ge/Scorer398/Material = "G4_WATER"
+d:Ge/Scorer398/HLX = Scorer0HLX cm
+d:Ge/Scorer398/HLY = Scorer0HLY cm
+d:Ge/Scorer398/HLZ = Scorer0HLZ cm
+d:Ge/Scorer398/TransX = Scorer0TransX cm
+d:Ge/Scorer398/TransY = Scorer0TransY cm
+d:Ge/Scorer398/TransZ = Scorer398TransZ cm
+d:Ge/Scorer398/RotX = 0. deg
+d:Ge/Scorer398/RotY = 0. deg
+d:Ge/Scorer398/RotZ = 0. deg
+s:Ge/Scorer398/Color = "red"
+s:Ge/Scorer398/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_398/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_398/Quantity = "ProtonLET"
+s:Sc/LET_398/Component = "Scorer398"
+s:Sc/LET_398/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_398/OutputType = "csv"
+s:Sc/LET_398/OutputFile = "./do_field/LET/39.8"
+
+#Scoring Dose
+s:Sc/Dose_398/Quantity = "DoseToWater"
+s:Sc/Dose_398/Component = "Scorer398"
+s:Sc/Dose_398/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_398/OutputType = "csv"
+s:Sc/Dose_398/OutputFile = "./do_field/Dose/39.8"
 
 ### SCORER 40 mm ############################################################################################
 #Define scorer position
@@ -554,6 +998,191 @@ s:Sc/Dose_40/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_40/OutputType = "csv"
 s:Sc/Dose_40/OutputFile = "./do_field/Dose/40"
 
+### SCORER 40.2mm ############################################################################################
+#Define scorer position
+d:Scorer402TransX = 0. cm
+d:Scorer402TransY = 0. cm
+d:Scorer402TransZ = Scorer0TransZ + 4.02 cm
+
+#Define scorer
+s:Ge/Scorer402/Type = "TsBox"
+s:Ge/Scorer402/Parent = "SolidWater"
+s:Ge/Scorer402/Material = "G4_WATER"
+d:Ge/Scorer402/HLX = Scorer0HLX cm
+d:Ge/Scorer402/HLY = Scorer0HLY cm
+d:Ge/Scorer402/HLZ = Scorer0HLZ cm
+d:Ge/Scorer402/TransX = Scorer0TransX cm
+d:Ge/Scorer402/TransY = Scorer0TransY cm
+d:Ge/Scorer402/TransZ = Scorer402TransZ cm
+d:Ge/Scorer402/RotX = 0. deg
+d:Ge/Scorer402/RotY = 0. deg
+d:Ge/Scorer402/RotZ = 0. deg
+s:Ge/Scorer402/Color = "red"
+s:Ge/Scorer402/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_402/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_402/Quantity = "ProtonLET"
+s:Sc/LET_402/Component = "Scorer402"
+s:Sc/LET_402/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_402/OutputType = "csv"
+s:Sc/LET_402/OutputFile = "./do_field/LET/40.2"
+
+#Scoring Dose
+s:Sc/Dose_402/Quantity = "DoseToWater"
+s:Sc/Dose_402/Component = "Scorer402"
+s:Sc/Dose_402/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_402/OutputType = "csv"
+s:Sc/Dose_402/OutputFile = "./do_field/Dose/40.2"
+
+### SCORER 40.4 mm ############################################################################################
+#Define scorer position
+d:Scorer404TransX = 0. cm
+d:Scorer404TransY = 0. cm
+d:Scorer404TransZ = Scorer0TransZ + 4.04 cm
+
+#Define scorer
+s:Ge/Scorer404/Type = "TsBox"
+s:Ge/Scorer404/Parent = "SolidWater"
+s:Ge/Scorer404/Material = "G4_WATER"
+d:Ge/Scorer404/HLX = Scorer0HLX cm
+d:Ge/Scorer404/HLY = Scorer0HLY cm
+d:Ge/Scorer404/HLZ = Scorer0HLZ cm
+d:Ge/Scorer404/TransX = Scorer0TransX cm
+d:Ge/Scorer404/TransY = Scorer0TransY cm
+d:Ge/Scorer404/TransZ = Scorer404TransZ cm
+d:Ge/Scorer404/RotX = 0. deg
+d:Ge/Scorer404/RotY = 0. deg
+d:Ge/Scorer404/RotZ = 0. deg
+s:Ge/Scorer404/Color = "red"
+s:Ge/Scorer404/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_404/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_404/Quantity = "ProtonLET"
+s:Sc/LET_404/Component = "Scorer404"
+s:Sc/LET_404/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_404/OutputType = "csv"
+s:Sc/LET_404/OutputFile = "./do_field/LET/40.4"
+
+#Scoring Dose
+s:Sc/Dose_404/Quantity = "DoseToWater"
+s:Sc/Dose_404/Component = "Scorer404"
+s:Sc/Dose_404/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_404/OutputType = "csv"
+s:Sc/Dose_404/OutputFile = "./do_field/Dose/40.4"
+
+### SCORER 40.5 mm ############################################################################################
+#Define scorer position
+d:Scorer405TransX = 0. cm
+d:Scorer405TransY = 0. cm
+d:Scorer405TransZ = Scorer0TransZ + 4.05 cm
+
+#Define scorer
+s:Ge/Scorer405/Type = "TsBox"
+s:Ge/Scorer405/Parent = "SolidWater"
+s:Ge/Scorer405/Material = "G4_WATER"
+d:Ge/Scorer405/HLX = Scorer0HLX cm
+d:Ge/Scorer405/HLY = Scorer0HLY cm
+d:Ge/Scorer405/HLZ = Scorer0HLZ cm
+d:Ge/Scorer405/TransX = Scorer0TransX cm
+d:Ge/Scorer405/TransY = Scorer0TransY cm
+d:Ge/Scorer405/TransZ = Scorer405TransZ cm
+d:Ge/Scorer405/RotX = 0. deg
+d:Ge/Scorer405/RotY = 0. deg
+d:Ge/Scorer405/RotZ = 0. deg
+s:Ge/Scorer405/Color = "red"
+s:Ge/Scorer405/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_405/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_405/Quantity = "ProtonLET"
+s:Sc/LET_405/Component = "Scorer405"
+s:Sc/LET_405/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_405/OutputType = "csv"
+s:Sc/LET_405/OutputFile = "./do_field/LET/40.5"
+
+#Scoring Dose
+s:Sc/Dose_405/Quantity = "DoseToWater"
+s:Sc/Dose_405/Component = "Scorer405"
+s:Sc/Dose_405/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_405/OutputType = "csv"
+s:Sc/Dose_405/OutputFile = "./do_field/Dose/40.5"
+
+### SCORER 41 mm ############################################################################################
+#Define scorer position
+d:Scorer41TransX = 0. cm
+d:Scorer41TransY = 0. cm
+d:Scorer41TransZ = Scorer0TransZ + 4.1 cm
+
+#Define scorer
+s:Ge/Scorer41/Type = "TsBox"
+s:Ge/Scorer41/Parent = "SolidWater"
+s:Ge/Scorer41/Material = "G4_WATER"
+d:Ge/Scorer41/HLX = Scorer0HLX cm
+d:Ge/Scorer41/HLY = Scorer0HLY cm
+d:Ge/Scorer41/HLZ = Scorer0HLZ cm
+d:Ge/Scorer41/TransX = Scorer0TransX cm
+d:Ge/Scorer41/TransY = Scorer0TransY cm
+d:Ge/Scorer41/TransZ = Scorer41TransZ cm
+d:Ge/Scorer41/RotX = 0. deg
+d:Ge/Scorer41/RotY = 0. deg
+d:Ge/Scorer41/RotZ = 0. deg
+s:Ge/Scorer41/Color = "red"
+s:Ge/Scorer41/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_41/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_41/Quantity = "ProtonLET"
+s:Sc/LET_41/Component = "Scorer41"
+s:Sc/LET_41/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_41/OutputType = "csv"
+s:Sc/LET_41/OutputFile = "./do_field/LET/41"
+
+#Scoring Dose
+s:Sc/Dose_41/Quantity = "DoseToWater"
+s:Sc/Dose_41/Component = "Scorer41"
+s:Sc/Dose_41/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_41/OutputType = "csv"
+s:Sc/Dose_41/OutputFile = "./do_field/Dose/41"
+
+### SCORER 41.5 mm ############################################################################################
+#Define scorer position
+d:Scorer415TransX = 0. cm
+d:Scorer415TransY = 0. cm
+d:Scorer415TransZ = Scorer0TransZ + 4.15 cm
+
+#Define scorer
+s:Ge/Scorer415/Type = "TsBox"
+s:Ge/Scorer415/Parent = "SolidWater"
+s:Ge/Scorer415/Material = "G4_WATER"
+d:Ge/Scorer415/HLX = Scorer0HLX cm
+d:Ge/Scorer415/HLY = Scorer0HLY cm
+d:Ge/Scorer415/HLZ = Scorer0HLZ cm
+d:Ge/Scorer415/TransX = Scorer0TransX cm
+d:Ge/Scorer415/TransY = Scorer0TransY cm
+d:Ge/Scorer415/TransZ = Scorer415TransZ cm
+d:Ge/Scorer415/RotX = 0. deg
+d:Ge/Scorer415/RotY = 0. deg
+d:Ge/Scorer415/RotZ = 0. deg
+s:Ge/Scorer415/Color = "red"
+s:Ge/Scorer415/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_415/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_415/Quantity = "ProtonLET"
+s:Sc/LET_415/Component = "Scorer415"
+s:Sc/LET_415/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_415/OutputType = "csv"
+s:Sc/LET_415/OutputFile = "./do_field/LET/41.5"
+
+#Scoring Dose
+s:Sc/Dose_415/Quantity = "DoseToWater"
+s:Sc/Dose_415/Component = "Scorer415"
+s:Sc/Dose_415/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_415/OutputType = "csv"
+s:Sc/Dose_415/OutputFile = "./do_field/Dose/41.5"
+
 ### SCORER 42 mm ############################################################################################
 #Define scorer position
 d:Scorer42TransX = 0. cm
@@ -590,6 +1219,81 @@ s:Sc/Dose_42/Component = "Scorer42"
 s:Sc/Dose_42/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_42/OutputType = "csv"
 s:Sc/Dose_42/OutputFile = "./do_field/Dose/42"
+
+### SCORER 42.5 mm ############################################################################################
+#Define scorer position
+d:Scorer425TransX = 0. cm
+d:Scorer425TransY = 0. cm
+d:Scorer425TransZ = Scorer0TransZ + 4.25 cm
+
+#Define scorer
+s:Ge/Scorer425/Type = "TsBox"
+s:Ge/Scorer425/Parent = "SolidWater"
+s:Ge/Scorer425/Material = "G4_WATER"
+d:Ge/Scorer425/HLX = Scorer0HLX cm
+d:Ge/Scorer425/HLY = Scorer0HLY cm
+d:Ge/Scorer425/HLZ = Scorer0HLZ cm
+d:Ge/Scorer425/TransX = Scorer0TransX cm
+d:Ge/Scorer425/TransY = Scorer0TransY cm
+d:Ge/Scorer425/TransZ = Scorer425TransZ cm
+d:Ge/Scorer425/RotX = 0. deg
+d:Ge/Scorer425/RotY = 0. deg
+d:Ge/Scorer425/RotZ = 0. deg
+s:Ge/Scorer425/Color = "red"
+s:Ge/Scorer425/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_425/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_425/Quantity = "ProtonLET"
+s:Sc/LET_425/Component = "Scorer425"
+s:Sc/LET_425/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_425/OutputType = "csv"
+s:Sc/LET_425/OutputFile = "./do_field/LET/42.5"
+
+#Scoring Dose
+s:Sc/Dose_425/Quantity = "DoseToWater"
+s:Sc/Dose_425/Component = "Scorer425"
+s:Sc/Dose_425/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_425/OutputType = "csv"
+s:Sc/Dose_425/OutputFile = "./do_field/Dose/42.5"
+
+### SCORER 43 mm ############################################################################################
+#Define scorer position
+d:Scorer43TransX = 0. cm
+d:Scorer43TransY = 0. cm
+d:Scorer43TransZ = Scorer0TransZ + 4.3 cm
+
+#Define scorer
+s:Ge/Scorer43/Type = "TsBox"
+s:Ge/Scorer43/Parent = "SolidWater"
+s:Ge/Scorer43/Material = "G4_WATER"
+d:Ge/Scorer43/HLX = Scorer0HLX cm
+d:Ge/Scorer43/HLY = Scorer0HLY cm
+d:Ge/Scorer43/HLZ = Scorer0HLZ cm
+d:Ge/Scorer43/TransX = Scorer0TransX cm
+d:Ge/Scorer43/TransY = Scorer0TransY cm
+d:Ge/Scorer43/TransZ = Scorer43TransZ cm
+d:Ge/Scorer43/RotX = 0. deg
+d:Ge/Scorer43/RotY = 0. deg
+d:Ge/Scorer43/RotZ = 0. deg
+s:Ge/Scorer43/Color = "red"
+s:Ge/Scorer43/DrawingStyle = "Solid"
+
+#Scoring Dose-averaged LET (LET_d)
+d:Sc/LET_43/MaxScoredLET = 20 MeV/mm/(g/cm3)
+s:Sc/LET_43/Quantity = "ProtonLET"
+s:Sc/LET_43/Component = "Scorer43"
+s:Sc/LET_43/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/LET_43/OutputType = "csv"
+s:Sc/LET_43/OutputFile = "./do_field/LET/43"
+
+#Scoring Dose
+s:Sc/Dose_43/Quantity = "DoseToWater"
+s:Sc/Dose_43/Component = "Scorer43"
+s:Sc/Dose_43/IfOutputFileAlreadyExists             = "Overwrite"
+s:Sc/Dose_43/OutputType = "csv"
+s:Sc/Dose_43/OutputFile = "./do_field/Dose/43"
+
 
 ### SCORER 44 mm ############################################################################################
 #Define scorer position
@@ -670,56 +1374,27 @@ s:Sc/Dose_45/OutputFile = "./do_field/Dose/45"
 ############################################### BEAM DEFINITION #####################################################
 #####################################################################################################################
 
-### MAKE A SPOT ####################################################################################################
-#Define dimensions 
-d:SpotHLX = 1.0 cm 
-d:SpotHLY = 1.0 cm 
-d:SpotHLZ = ExitWindowHLZ cm
-
-#Define position
-d:SpotTransX = 0. cm
-d:SpotTransY = 0. cm
-d:SpotTransZ = 0. cm
-
-#Define Spot
-s:Ge/Spot/Type     = "TsBox"
-s:Ge/Spot/Material = "G4_AIR"
-s:Ge/Spot/Parent   = "ExitWindow"
-d:Ge/Spot/HLX      = SpotHLX cm
-d:Ge/Spot/HLY      = SpotHLY cm
-d:Ge/Spot/HLZ      = SpotHLZ cm
-d:Ge/Spot/TransX   = SpotTransX cm
-d:Ge/Spot/TransY   = SpotTransY cm
-d:Ge/Spot/TransZ   = SpotTransZ cm
-d:Ge/Spot/RotX     = 0. deg
-d:Ge/Spot/RotY     = 0. deg
-d:Ge/Spot/RotZ     = 0. deg
-s:Ge/Spot/Color    = "yellow"
-s:Ge/Spot/DrawingStyle = "Solid"
-
-
-
 ### BEAM ITSELF #####################################################################################################
 #Defining Beam
 s:So/Example/Type                     = "Beam"
 s:So/Example/Component                = "BeamPosition"
 s:So/Example/BeamParticle             = "proton"
-d:So/Example/BeamEnergy               = 69.0 MeV
+d:So/Example/BeamEnergy               = 69.87 MeV
 u:So/Example/BeamEnergySpread         = 0.757504
-s:So/Example/BeamPositionDistribution = "None"
-s:So/Example/BeamPositionCutoffShape  = "Ellipse"
-d:So/Example/BeamPositionCutoffX      = 12.5 cm
-d:So/Example/BeamPositionCutoffY      = 12.5 cm
+s:So/Example/BeamPositionDistribution = "Flat"
+s:So/Example/BeamPositionCutoffShape  = "Rectangle"
+d:So/Example/BeamPositionCutoffX      = 0.5 * ExitWindowHLX cm
+d:So/Example/BeamPositionCutoffY      = 0.5 * ExitWindowHLY cm
 #d:So/Example/BeamPositionSpreadX      = 0.05 cm
 #d:So/Example/BeamPositionSpreadY      = 0.05 cm
 s:So/Example/BeamAngularDistribution  = "Flat"
-d:So/Example/BeamAngularCutoffX       = 10. deg
-d:So/Example/BeamAngularCutoffY       = 10. deg
+d:So/Example/BeamAngularCutoffX       = 1. deg
+d:So/Example/BeamAngularCutoffY       = 1. deg
 #d:So/Example/BeamAngularSpreadX       = 0.0032 rad
 #d:So/Example/BeamAngularSpreadY       = 0.0032 rad
 i:So/Example/NumberOfHistoriesInRun   = NrHistories
 
-s:Ge/BeamPosition/Parent="Spot"
+s:Ge/BeamPosition/Parent="ExitWindow"
 s:Ge/BeamPosition/Type="Group"
 d:Ge/BeamPosition/TransX=0. m
 d:Ge/BeamPosition/TransY=0. m
@@ -727,6 +1402,7 @@ d:Ge/BeamPosition/TransZ=0. cm
 d:Ge/BeamPosition/RotX=0. deg
 d:Ge/BeamPosition/RotY=0. deg
 d:Ge/BeamPosition/RotZ=0. deg
+
 
 
 #####################################################################################################################
@@ -750,5 +1426,3 @@ i:Ts/NumberOfThreads = 1
 sv:Ph/Default/Modules = 6 "g4em-standard_opt4" "g4h-phy_QGSP_BIC_HP" "g4decay" "g4ion-binarycascade" "g4h-elastic_HP" "g4stopping"
 
 b:Ts/PauseBeforeQuit = "True"
-
-

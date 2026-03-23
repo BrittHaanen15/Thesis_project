@@ -3,7 +3,7 @@
 #####################################################################################################################
 
 #Number of particles to simulate CAN CHANGE THIS
-i:NrHistories = 100000
+i:NrHistories = 15000
 
 #Amount of solid water added to setup on top of nozzle CAN CHANGE THIS
 d:SolidWaterAdded = 45.5 mm
@@ -244,14 +244,14 @@ s:Sc/LET_0/Quantity = "ProtonLET"
 s:Sc/LET_0/Component = "Scorer0"
 s:Sc/LET_0/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_0/OutputType = "csv"
-s:Sc/LET_0/OutputFile = "./do_field/LET/0"
+s:Sc/LET_0/OutputFile = "./do_9spots/LET/0"
 
 #Scoring Dose
 s:Sc/Dose_0/Quantity = "DoseToWater"
 s:Sc/Dose_0/Component = "Scorer0"
 s:Sc/Dose_0/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_0/OutputType = "csv"
-s:Sc/Dose_0/OutputFile = "./do_field/Dose/0"
+s:Sc/Dose_0/OutputFile = "./do_9spots/Dose/0"
 
 ### SCORER 10 mm ############################################################################################
 #Define scorer dimension
@@ -286,14 +286,14 @@ s:Sc/LET_10/Quantity = "ProtonLET"
 s:Sc/LET_10/Component = "Scorer10"
 s:Sc/LET_10/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_10/OutputType = "csv"
-s:Sc/LET_10/OutputFile = "./do_field/LET/10"
+s:Sc/LET_10/OutputFile = "./do_9spots/LET/10"
 
 #Scoring Dose
 s:Sc/Dose_10/Quantity = "DoseToWater"
 s:Sc/Dose_10/Component = "Scorer10"
 s:Sc/Dose_10/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_10/OutputType = "csv"
-s:Sc/Dose_10/OutputFile = "./do_field/Dose/10"
+s:Sc/Dose_10/OutputFile = "./do_9spots/Dose/10"
 
 ### SCORER 20 mm ############################################################################################
 #Define scorer position
@@ -323,14 +323,14 @@ s:Sc/LET_20/Quantity = "ProtonLET"
 s:Sc/LET_20/Component = "Scorer20"
 s:Sc/LET_20/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_20/OutputType = "csv"
-s:Sc/LET_20/OutputFile = "./do_field/LET/20"
+s:Sc/LET_20/OutputFile = "./do_9spots/LET/20"
 
 #Scoring Dose
 s:Sc/Dose_20/Quantity = "DoseToWater"
 s:Sc/Dose_20/Component = "Scorer20"
 s:Sc/Dose_20/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_20/OutputType = "csv"
-s:Sc/Dose_20/OutputFile = "./do_field/Dose/20"
+s:Sc/Dose_20/OutputFile = "./do_9spots/Dose/20"
 
 ### SCORER 30 mm ############################################################################################
 #Define scorer position
@@ -360,14 +360,14 @@ s:Sc/LET_30/Quantity = "ProtonLET"
 s:Sc/LET_30/Component = "Scorer30"
 s:Sc/LET_30/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_30/OutputType = "csv"
-s:Sc/LET_30/OutputFile = "./do_field/LET/30"
+s:Sc/LET_30/OutputFile = "./do_9spots/LET/30"
 
 #Scoring Dose
 s:Sc/Dose_30/Quantity = "DoseToWater"
 s:Sc/Dose_30/Component = "Scorer30"
 s:Sc/Dose_30/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_30/OutputType = "csv"
-s:Sc/Dose_30/OutputFile = "./do_field/Dose/30"
+s:Sc/Dose_30/OutputFile = "./do_9spots/Dose/30"
 
 ### SCORER 32 mm ############################################################################################
 #Define scorer position
@@ -397,14 +397,14 @@ s:Sc/LET_32/Quantity = "ProtonLET"
 s:Sc/LET_32/Component = "Scorer32"
 s:Sc/LET_32/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_32/OutputType = "csv"
-s:Sc/LET_32/OutputFile = "./do_field/LET/32"
+s:Sc/LET_32/OutputFile = "./do_9spots/LET/32"
 
 #Scoring Dose
 s:Sc/Dose_32/Quantity = "DoseToWater"
 s:Sc/Dose_32/Component = "Scorer32"
 s:Sc/Dose_32/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_32/OutputType = "csv"
-s:Sc/Dose_32/OutputFile = "./do_field/Dose/32"
+s:Sc/Dose_32/OutputFile = "./do_9spots/Dose/32"
 
 ### SCORER 34 mm ############################################################################################
 #Define scorer position
@@ -434,14 +434,14 @@ s:Sc/LET_34/Quantity = "ProtonLET"
 s:Sc/LET_34/Component = "Scorer34"
 s:Sc/LET_34/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_34/OutputType = "csv"
-s:Sc/LET_34/OutputFile = "./do_field/LET/34"
+s:Sc/LET_34/OutputFile = "./do_9spots/LET/34"
 
 #Scoring Dose
 s:Sc/Dose_34/Quantity = "DoseToWater"
 s:Sc/Dose_34/Component = "Scorer34"
 s:Sc/Dose_34/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_34/OutputType = "csv"
-s:Sc/Dose_34/OutputFile = "./do_field/Dose/34"
+s:Sc/Dose_34/OutputFile = "./do_9spots/Dose/34"
 
 ### SCORER 36 mm ############################################################################################
 #Define scorer position
@@ -471,14 +471,14 @@ s:Sc/LET_36/Quantity = "ProtonLET"
 s:Sc/LET_36/Component = "Scorer36"
 s:Sc/LET_36/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_36/OutputType = "csv"
-s:Sc/LET_36/OutputFile = "./do_field/LET/36"
+s:Sc/LET_36/OutputFile = "./do_9spots/LET/36"
 
 #Scoring Dose
 s:Sc/Dose_36/Quantity = "DoseToWater"
 s:Sc/Dose_36/Component = "Scorer36"
 s:Sc/Dose_36/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_36/OutputType = "csv"
-s:Sc/Dose_36/OutputFile = "./do_field/Dose/36"
+s:Sc/Dose_36/OutputFile = "./do_9spots/Dose/36"
 
 ### SCORER 36.5 mm ############################################################################################
 #Define scorer position
@@ -508,14 +508,14 @@ s:Sc/LET_365/Quantity = "ProtonLET"
 s:Sc/LET_365/Component = "Scorer365"
 s:Sc/LET_365/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_365/OutputType = "csv"
-s:Sc/LET_365/OutputFile = "./do_field/LET/36.5"
+s:Sc/LET_365/OutputFile = "./do_9spots/LET/36.5"
 
 #Scoring Dose
 s:Sc/Dose_365/Quantity = "DoseToWater"
 s:Sc/Dose_365/Component = "Scorer365"
 s:Sc/Dose_365/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_365/OutputType = "csv"
-s:Sc/Dose_365/OutputFile = "./do_field/Dose/36.5"
+s:Sc/Dose_365/OutputFile = "./do_9spots/Dose/36.5"
 
 ### SCORER 37 mm ############################################################################################
 #Define scorer position
@@ -545,14 +545,14 @@ s:Sc/LET_37/Quantity = "ProtonLET"
 s:Sc/LET_37/Component = "Scorer37"
 s:Sc/LET_37/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_37/OutputType = "csv"
-s:Sc/LET_37/OutputFile = "./do_field/LET/37"
+s:Sc/LET_37/OutputFile = "./do_9spots/LET/37"
 
 #Scoring Dose
 s:Sc/Dose_37/Quantity = "DoseToWater"
 s:Sc/Dose_37/Component = "Scorer37"
 s:Sc/Dose_37/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_37/OutputType = "csv"
-s:Sc/Dose_37/OutputFile = "./do_field/Dose/37"
+s:Sc/Dose_37/OutputFile = "./do_9spots/Dose/37"
 
 ### SCORER 37.5 mm ############################################################################################
 #Define scorer position
@@ -582,14 +582,14 @@ s:Sc/LET_375/Quantity = "ProtonLET"
 s:Sc/LET_375/Component = "Scorer375"
 s:Sc/LET_375/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_375/OutputType = "csv"
-s:Sc/LET_375/OutputFile = "./do_field/LET/37.5"
+s:Sc/LET_375/OutputFile = "./do_9spots/LET/37.5"
 
 #Scoring Dose
 s:Sc/Dose_375/Quantity = "DoseToWater"
 s:Sc/Dose_375/Component = "Scorer375"
 s:Sc/Dose_375/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_375/OutputType = "csv"
-s:Sc/Dose_375/OutputFile = "./do_field/Dose/37.5"
+s:Sc/Dose_375/OutputFile = "./do_9spots/Dose/37.5"
 
 ### SCORER 38 mm ############################################################################################
 #Define scorer position
@@ -619,14 +619,14 @@ s:Sc/LET_38/Quantity = "ProtonLET"
 s:Sc/LET_38/Component = "Scorer38"
 s:Sc/LET_38/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_38/OutputType = "csv"
-s:Sc/LET_38/OutputFile = "./do_field/LET/38"
+s:Sc/LET_38/OutputFile = "./do_9spots/LET/38"
 
 #Scoring Dose
 s:Sc/Dose_38/Quantity = "DoseToWater"
 s:Sc/Dose_38/Component = "Scorer38"
 s:Sc/Dose_38/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_38/OutputType = "csv"
-s:Sc/Dose_38/OutputFile = "./do_field/Dose/38"
+s:Sc/Dose_38/OutputFile = "./do_9spots/Dose/38"
 
 ### SCORER 38.5 mm ############################################################################################
 #Define scorer position
@@ -656,14 +656,14 @@ s:Sc/LET_385/Quantity = "ProtonLET"
 s:Sc/LET_385/Component = "Scorer385"
 s:Sc/LET_385/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_385/OutputType = "csv"
-s:Sc/LET_385/OutputFile = "./do_field/LET/38.5"
+s:Sc/LET_385/OutputFile = "./do_9spots/LET/38.5"
 
 #Scoring Dose
 s:Sc/Dose_385/Quantity = "DoseToWater"
 s:Sc/Dose_385/Component = "Scorer385"
 s:Sc/Dose_385/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_385/OutputType = "csv"
-s:Sc/Dose_385/OutputFile = "./do_field/Dose/38.5"
+s:Sc/Dose_385/OutputFile = "./do_9spots/Dose/38.5"
 
 ### SCORER 38.6 mm ############################################################################################
 #Define scorer position
@@ -693,14 +693,14 @@ s:Sc/LET_386/Quantity = "ProtonLET"
 s:Sc/LET_386/Component = "Scorer386"
 s:Sc/LET_386/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_386/OutputType = "csv"
-s:Sc/LET_386/OutputFile = "./do_field/LET/38.6"
+s:Sc/LET_386/OutputFile = "./do_9spots/LET/38.6"
 
 #Scoring Dose
 s:Sc/Dose_386/Quantity = "DoseToWater"
 s:Sc/Dose_386/Component = "Scorer386"
 s:Sc/Dose_386/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_386/OutputType = "csv"
-s:Sc/Dose_386/OutputFile = "./do_field/Dose/38.6"
+s:Sc/Dose_386/OutputFile = "./do_9spots/Dose/38.6"
 
 ### SCORER 38.8 mm ############################################################################################
 #Define scorer position
@@ -730,14 +730,14 @@ s:Sc/LET_388/Quantity = "ProtonLET"
 s:Sc/LET_388/Component = "Scorer388"
 s:Sc/LET_388/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_388/OutputType = "csv"
-s:Sc/LET_388/OutputFile = "./do_field/LET/38.8"
+s:Sc/LET_388/OutputFile = "./do_9spots/LET/38.8"
 
 #Scoring Dose
 s:Sc/Dose_388/Quantity = "DoseToWater"
 s:Sc/Dose_388/Component = "Scorer388"
 s:Sc/Dose_388/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_388/OutputType = "csv"
-s:Sc/Dose_388/OutputFile = "./do_field/Dose/38.8"
+s:Sc/Dose_388/OutputFile = "./do_9spots/Dose/38.8"
 
 ### SCORER 39 mm ############################################################################################
 #Define scorer position
@@ -767,14 +767,14 @@ s:Sc/LET_39/Quantity = "ProtonLET"
 s:Sc/LET_39/Component = "Scorer39"
 s:Sc/LET_39/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_39/OutputType = "csv"
-s:Sc/LET_39/OutputFile = "./do_field/LET/39"
+s:Sc/LET_39/OutputFile = "./do_9spots/LET/39"
 
 #Scoring Dose
 s:Sc/Dose_39/Quantity = "DoseToWater"
 s:Sc/Dose_39/Component = "Scorer39"
 s:Sc/Dose_39/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_39/OutputType = "csv"
-s:Sc/Dose_39/OutputFile = "./do_field/Dose/39"
+s:Sc/Dose_39/OutputFile = "./do_9spots/Dose/39"
 
 ### SCORER 39.2 mm ############################################################################################
 #Define scorer position
@@ -804,14 +804,14 @@ s:Sc/LET_392/Quantity = "ProtonLET"
 s:Sc/LET_392/Component = "Scorer392"
 s:Sc/LET_392/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_392/OutputType = "csv"
-s:Sc/LET_392/OutputFile = "./do_field/LET/39.2"
+s:Sc/LET_392/OutputFile = "./do_9spots/LET/39.2"
 
 #Scoring Dose
 s:Sc/Dose_392/Quantity = "DoseToWater"
 s:Sc/Dose_392/Component = "Scorer392"
 s:Sc/Dose_392/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_392/OutputType = "csv"
-s:Sc/Dose_392/OutputFile = "./do_field/Dose/39.2"
+s:Sc/Dose_392/OutputFile = "./do_9spots/Dose/39.2"
 
 ### SCORER 39.4 mm ############################################################################################
 #Define scorer position
@@ -841,14 +841,14 @@ s:Sc/LET_394/Quantity = "ProtonLET"
 s:Sc/LET_394/Component = "Scorer394"
 s:Sc/LET_394/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_394/OutputType = "csv"
-s:Sc/LET_394/OutputFile = "./do_field/LET/39.4"
+s:Sc/LET_394/OutputFile = "./do_9spots/LET/39.4"
 
 #Scoring Dose
 s:Sc/Dose_394/Quantity = "DoseToWater"
 s:Sc/Dose_394/Component = "Scorer394"
 s:Sc/Dose_394/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_394/OutputType = "csv"
-s:Sc/Dose_394/OutputFile = "./do_field/Dose/39.4"
+s:Sc/Dose_394/OutputFile = "./do_9spots/Dose/39.4"
 
 ### SCORER 39.5 mm ############################################################################################
 #Define scorer position
@@ -878,14 +878,14 @@ s:Sc/LET_395/Quantity = "ProtonLET"
 s:Sc/LET_395/Component = "Scorer395"
 s:Sc/LET_395/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_395/OutputType = "csv"
-s:Sc/LET_395/OutputFile = "./do_field/LET/39.5"
+s:Sc/LET_395/OutputFile = "./do_9spots/LET/39.5"
 
 #Scoring Dose
 s:Sc/Dose_395/Quantity = "DoseToWater"
 s:Sc/Dose_395/Component = "Scorer395"
 s:Sc/Dose_395/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_395/OutputType = "csv"
-s:Sc/Dose_395/OutputFile = "./do_field/Dose/39.5"
+s:Sc/Dose_395/OutputFile = "./do_9spots/Dose/39.5"
 
 ### SCORER 39.6 mm ############################################################################################
 #Define scorer position
@@ -915,14 +915,14 @@ s:Sc/LET_396/Quantity = "ProtonLET"
 s:Sc/LET_396/Component = "Scorer396"
 s:Sc/LET_396/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_396/OutputType = "csv"
-s:Sc/LET_396/OutputFile = "./do_field/LET/39.6"
+s:Sc/LET_396/OutputFile = "./do_9spots/LET/39.6"
 
 #Scoring Dose
 s:Sc/Dose_396/Quantity = "DoseToWater"
 s:Sc/Dose_396/Component = "Scorer396"
 s:Sc/Dose_396/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_396/OutputType = "csv"
-s:Sc/Dose_396/OutputFile = "./do_field/Dose/39.6"
+s:Sc/Dose_396/OutputFile = "./do_9spots/Dose/39.6"
 
 ### SCORER 39.8 mm ############################################################################################
 #Define scorer position
@@ -952,14 +952,14 @@ s:Sc/LET_398/Quantity = "ProtonLET"
 s:Sc/LET_398/Component = "Scorer398"
 s:Sc/LET_398/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_398/OutputType = "csv"
-s:Sc/LET_398/OutputFile = "./do_field/LET/39.8"
+s:Sc/LET_398/OutputFile = "./do_9spots/LET/39.8"
 
 #Scoring Dose
 s:Sc/Dose_398/Quantity = "DoseToWater"
 s:Sc/Dose_398/Component = "Scorer398"
 s:Sc/Dose_398/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_398/OutputType = "csv"
-s:Sc/Dose_398/OutputFile = "./do_field/Dose/39.8"
+s:Sc/Dose_398/OutputFile = "./do_9spots/Dose/39.8"
 
 ### SCORER 40 mm ############################################################################################
 #Define scorer position
@@ -989,14 +989,14 @@ s:Sc/LET_40/Quantity = "ProtonLET"
 s:Sc/LET_40/Component = "Scorer40"
 s:Sc/LET_40/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_40/OutputType = "csv"
-s:Sc/LET_40/OutputFile = "./do_field/LET/40"
+s:Sc/LET_40/OutputFile = "./do_9spots/LET/40"
 
 #Scoring Dose
 s:Sc/Dose_40/Quantity = "DoseToWater"
 s:Sc/Dose_40/Component = "Scorer40"
 s:Sc/Dose_40/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_40/OutputType = "csv"
-s:Sc/Dose_40/OutputFile = "./do_field/Dose/40"
+s:Sc/Dose_40/OutputFile = "./do_9spots/Dose/40"
 
 ### SCORER 40.2mm ############################################################################################
 #Define scorer position
@@ -1026,14 +1026,14 @@ s:Sc/LET_402/Quantity = "ProtonLET"
 s:Sc/LET_402/Component = "Scorer402"
 s:Sc/LET_402/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_402/OutputType = "csv"
-s:Sc/LET_402/OutputFile = "./do_field/LET/40.2"
+s:Sc/LET_402/OutputFile = "./do_9spots/LET/40.2"
 
 #Scoring Dose
 s:Sc/Dose_402/Quantity = "DoseToWater"
 s:Sc/Dose_402/Component = "Scorer402"
 s:Sc/Dose_402/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_402/OutputType = "csv"
-s:Sc/Dose_402/OutputFile = "./do_field/Dose/40.2"
+s:Sc/Dose_402/OutputFile = "./do_9spots/Dose/40.2"
 
 ### SCORER 40.4 mm ############################################################################################
 #Define scorer position
@@ -1063,14 +1063,14 @@ s:Sc/LET_404/Quantity = "ProtonLET"
 s:Sc/LET_404/Component = "Scorer404"
 s:Sc/LET_404/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_404/OutputType = "csv"
-s:Sc/LET_404/OutputFile = "./do_field/LET/40.4"
+s:Sc/LET_404/OutputFile = "./do_9spots/LET/40.4"
 
 #Scoring Dose
 s:Sc/Dose_404/Quantity = "DoseToWater"
 s:Sc/Dose_404/Component = "Scorer404"
 s:Sc/Dose_404/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_404/OutputType = "csv"
-s:Sc/Dose_404/OutputFile = "./do_field/Dose/40.4"
+s:Sc/Dose_404/OutputFile = "./do_9spots/Dose/40.4"
 
 ### SCORER 40.5 mm ############################################################################################
 #Define scorer position
@@ -1100,14 +1100,14 @@ s:Sc/LET_405/Quantity = "ProtonLET"
 s:Sc/LET_405/Component = "Scorer405"
 s:Sc/LET_405/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_405/OutputType = "csv"
-s:Sc/LET_405/OutputFile = "./do_field/LET/40.5"
+s:Sc/LET_405/OutputFile = "./do_9spots/LET/40.5"
 
 #Scoring Dose
 s:Sc/Dose_405/Quantity = "DoseToWater"
 s:Sc/Dose_405/Component = "Scorer405"
 s:Sc/Dose_405/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_405/OutputType = "csv"
-s:Sc/Dose_405/OutputFile = "./do_field/Dose/40.5"
+s:Sc/Dose_405/OutputFile = "./do_9spots/Dose/40.5"
 
 ### SCORER 41 mm ############################################################################################
 #Define scorer position
@@ -1137,14 +1137,14 @@ s:Sc/LET_41/Quantity = "ProtonLET"
 s:Sc/LET_41/Component = "Scorer41"
 s:Sc/LET_41/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_41/OutputType = "csv"
-s:Sc/LET_41/OutputFile = "./do_field/LET/41"
+s:Sc/LET_41/OutputFile = "./do_9spots/LET/41"
 
 #Scoring Dose
 s:Sc/Dose_41/Quantity = "DoseToWater"
 s:Sc/Dose_41/Component = "Scorer41"
 s:Sc/Dose_41/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_41/OutputType = "csv"
-s:Sc/Dose_41/OutputFile = "./do_field/Dose/41"
+s:Sc/Dose_41/OutputFile = "./do_9spots/Dose/41"
 
 ### SCORER 41.5 mm ############################################################################################
 #Define scorer position
@@ -1174,14 +1174,14 @@ s:Sc/LET_415/Quantity = "ProtonLET"
 s:Sc/LET_415/Component = "Scorer415"
 s:Sc/LET_415/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_415/OutputType = "csv"
-s:Sc/LET_415/OutputFile = "./do_field/LET/41.5"
+s:Sc/LET_415/OutputFile = "./do_9spots/LET/41.5"
 
 #Scoring Dose
 s:Sc/Dose_415/Quantity = "DoseToWater"
 s:Sc/Dose_415/Component = "Scorer415"
 s:Sc/Dose_415/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_415/OutputType = "csv"
-s:Sc/Dose_415/OutputFile = "./do_field/Dose/41.5"
+s:Sc/Dose_415/OutputFile = "./do_9spots/Dose/41.5"
 
 ### SCORER 42 mm ############################################################################################
 #Define scorer position
@@ -1211,14 +1211,14 @@ s:Sc/LET_42/Quantity = "ProtonLET"
 s:Sc/LET_42/Component = "Scorer42"
 s:Sc/LET_42/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_42/OutputType = "csv"
-s:Sc/LET_42/OutputFile = "./do_field/LET/42"
+s:Sc/LET_42/OutputFile = "./do_9spots/LET/42"
 
 #Scoring Dose
 s:Sc/Dose_42/Quantity = "DoseToWater"
 s:Sc/Dose_42/Component = "Scorer42"
 s:Sc/Dose_42/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_42/OutputType = "csv"
-s:Sc/Dose_42/OutputFile = "./do_field/Dose/42"
+s:Sc/Dose_42/OutputFile = "./do_9spots/Dose/42"
 
 ### SCORER 42.5 mm ############################################################################################
 #Define scorer position
@@ -1248,14 +1248,14 @@ s:Sc/LET_425/Quantity = "ProtonLET"
 s:Sc/LET_425/Component = "Scorer425"
 s:Sc/LET_425/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_425/OutputType = "csv"
-s:Sc/LET_425/OutputFile = "./do_field/LET/42.5"
+s:Sc/LET_425/OutputFile = "./do_9spots/LET/42.5"
 
 #Scoring Dose
 s:Sc/Dose_425/Quantity = "DoseToWater"
 s:Sc/Dose_425/Component = "Scorer425"
 s:Sc/Dose_425/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_425/OutputType = "csv"
-s:Sc/Dose_425/OutputFile = "./do_field/Dose/42.5"
+s:Sc/Dose_425/OutputFile = "./do_9spots/Dose/42.5"
 
 ### SCORER 43 mm ############################################################################################
 #Define scorer position
@@ -1285,14 +1285,14 @@ s:Sc/LET_43/Quantity = "ProtonLET"
 s:Sc/LET_43/Component = "Scorer43"
 s:Sc/LET_43/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_43/OutputType = "csv"
-s:Sc/LET_43/OutputFile = "./do_field/LET/43"
+s:Sc/LET_43/OutputFile = "./do_9spots/LET/43"
 
 #Scoring Dose
 s:Sc/Dose_43/Quantity = "DoseToWater"
 s:Sc/Dose_43/Component = "Scorer43"
 s:Sc/Dose_43/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_43/OutputType = "csv"
-s:Sc/Dose_43/OutputFile = "./do_field/Dose/43"
+s:Sc/Dose_43/OutputFile = "./do_9spots/Dose/43"
 
 
 ### SCORER 44 mm ############################################################################################
@@ -1323,14 +1323,14 @@ s:Sc/LET_44/Quantity = "ProtonLET"
 s:Sc/LET_44/Component = "Scorer44"
 s:Sc/LET_44/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_44/OutputType = "csv"
-s:Sc/LET_44/OutputFile = "./do_field/LET/44"
+s:Sc/LET_44/OutputFile = "./do_9spots/LET/44"
 
 #Scoring Dose
 s:Sc/Dose_44/Quantity = "DoseToWater"
 s:Sc/Dose_44/Component = "Scorer44"
 s:Sc/Dose_44/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_44/OutputType = "csv"
-s:Sc/Dose_44/OutputFile = "./do_field/Dose/44"
+s:Sc/Dose_44/OutputFile = "./do_9spots/Dose/44"
 
 ### SCORER 45 mm ############################################################################################
 #Define scorer position
@@ -1360,14 +1360,14 @@ s:Sc/LET_45/Quantity = "ProtonLET"
 s:Sc/LET_45/Component = "Scorer45"
 s:Sc/LET_45/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/LET_45/OutputType = "csv"
-s:Sc/LET_45/OutputFile = "./do_field/LET/45"
+s:Sc/LET_45/OutputFile = "./do_9spots/LET/45"
 
 #Scoring Dose
 s:Sc/Dose_45/Quantity = "DoseToWater"
 s:Sc/Dose_45/Component = "Scorer45"
 s:Sc/Dose_45/IfOutputFileAlreadyExists             = "Overwrite"
 s:Sc/Dose_45/OutputType = "csv"
-s:Sc/Dose_45/OutputFile = "./do_field/Dose/45"
+s:Sc/Dose_45/OutputFile = "./do_9spots/Dose/45"
 
 
 #####################################################################################################################
@@ -1375,33 +1375,266 @@ s:Sc/Dose_45/OutputFile = "./do_field/Dose/45"
 #####################################################################################################################
 
 ### BEAM ITSELF #####################################################################################################
-#Defining Beam
-s:So/Example/Type                     = "Beam"
-s:So/Example/Component                = "BeamPosition"
-s:So/Example/BeamParticle             = "proton"
-d:So/Example/BeamEnergy               = 69.87 MeV
-u:So/Example/BeamEnergySpread         = 0.757504
-s:So/Example/BeamPositionDistribution = "Flat"
-s:So/Example/BeamPositionCutoffShape  = "Rectangle"
-d:So/Example/BeamPositionCutoffX      = 0.5 * ExitWindowHLX cm
-d:So/Example/BeamPositionCutoffY      = 0.5 * ExitWindowHLY cm
-#d:So/Example/BeamPositionSpreadX      = 0.05 cm
-#d:So/Example/BeamPositionSpreadY      = 0.05 cm
-s:So/Example/BeamAngularDistribution  = "Flat"
-d:So/Example/BeamAngularCutoffX       = 1. deg
-d:So/Example/BeamAngularCutoffY       = 1. deg
+#Defining Beam 1
+s:So/Beam1/Type                     = "Beam"
+s:So/Beam1/Component                = "BeamPosition1"
+s:So/Beam1/BeamParticle             = "proton"
+d:So/Beam1/BeamEnergy               = 69.87 MeV
+u:So/Beam1/BeamEnergySpread         = 0.757504
+s:So/Beam1/BeamPositionDistribution = "Flat"
+s:So/Beam1/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam1/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam1/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam1/BeamAngularDistribution  = "Flat"
+d:So/Beam1/BeamAngularCutoffX       = 1. deg
+d:So/Beam1/BeamAngularCutoffY       = 1. deg
 #d:So/Example/BeamAngularSpreadX       = 0.0032 rad
 #d:So/Example/BeamAngularSpreadY       = 0.0032 rad
-i:So/Example/NumberOfHistoriesInRun   = NrHistories
+i:So/Beam1/NumberOfHistoriesInRun   = NrHistories
 
-s:Ge/BeamPosition/Parent="ExitWindow"
-s:Ge/BeamPosition/Type="Group"
-d:Ge/BeamPosition/TransX=0. m
-d:Ge/BeamPosition/TransY=0. m
-d:Ge/BeamPosition/TransZ=0. cm
-d:Ge/BeamPosition/RotX=0. deg
-d:Ge/BeamPosition/RotY=0. deg
-d:Ge/BeamPosition/RotZ=0. deg
+s:Ge/BeamPosition1/Parent="ExitWindow"
+s:Ge/BeamPosition1/Type="Group"
+d:Ge/BeamPosition1/TransX= -0.8 cm
+d:Ge/BeamPosition1/TransY= 0.8 cm
+d:Ge/BeamPosition1/TransZ=0. cm
+d:Ge/BeamPosition1/RotX=0. deg
+d:Ge/BeamPosition1/RotY=0. deg
+d:Ge/BeamPosition1/RotZ=0. deg
+
+#Defining Beam 2
+s:So/Beam2/Type                     = "Beam"
+s:So/Beam2/Component                = "BeamPosition2"
+s:So/Beam2/BeamParticle             = "proton"
+d:So/Beam2/BeamEnergy               = 69.87 MeV
+u:So/Beam2/BeamEnergySpread         = 0.757504
+s:So/Beam2/BeamPositionDistribution = "Flat"
+s:So/Beam2/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam2/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam2/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam2/BeamAngularDistribution  = "Flat"
+d:So/Beam2/BeamAngularCutoffX       = 1. deg
+d:So/Beam2/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam2/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition2/Parent="ExitWindow"
+s:Ge/BeamPosition2/Type="Group"
+d:Ge/BeamPosition2/TransX= 0. cm
+d:Ge/BeamPosition2/TransY= 0.8 cm
+d:Ge/BeamPosition2/TransZ=0. cm
+d:Ge/BeamPosition2/RotX=0. deg
+d:Ge/BeamPosition2/RotY=0. deg
+d:Ge/BeamPosition2/RotZ=0. deg
+
+#Defining Beam 3
+s:So/Beam3/Type                     = "Beam"
+s:So/Beam3/Component                = "BeamPosition3"
+s:So/Beam3/BeamParticle             = "proton"
+d:So/Beam3/BeamEnergy               = 69.87 MeV
+u:So/Beam3/BeamEnergySpread         = 0.757504
+s:So/Beam3/BeamPositionDistribution = "Flat"
+s:So/Beam3/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam3/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam3/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam3/BeamAngularDistribution  = "Flat"
+d:So/Beam3/BeamAngularCutoffX       = 1. deg
+d:So/Beam3/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam3/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition3/Parent="ExitWindow"
+s:Ge/BeamPosition3/Type="Group"
+d:Ge/BeamPosition3/TransX= 0.8 cm
+d:Ge/BeamPosition3/TransY= 0.8 cm
+d:Ge/BeamPosition3/TransZ=0. cm
+d:Ge/BeamPosition3/RotX=0. deg
+d:Ge/BeamPosition3/RotY=0. deg
+d:Ge/BeamPosition3/RotZ=0. deg
+
+#Defining Beam 4
+s:So/Beam4/Type                     = "Beam"
+s:So/Beam4/Component                = "BeamPosition4"
+s:So/Beam4/BeamParticle             = "proton"
+d:So/Beam4/BeamEnergy               = 69.87 MeV
+u:So/Beam4/BeamEnergySpread         = 0.757504
+s:So/Beam4/BeamPositionDistribution = "Flat"
+s:So/Beam4/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam4/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam4/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam4/BeamAngularDistribution  = "Flat"
+d:So/Beam4/BeamAngularCutoffX       = 1. deg
+d:So/Beam4/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam4/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition4/Parent="ExitWindow"
+s:Ge/BeamPosition4/Type="Group"
+d:Ge/BeamPosition4/TransX= -0.8 cm
+d:Ge/BeamPosition4/TransY= 0 cm
+d:Ge/BeamPosition4/TransZ=0. cm
+d:Ge/BeamPosition4/RotX=0. deg
+d:Ge/BeamPosition4/RotY=0. deg
+d:Ge/BeamPosition4/RotZ=0. deg
+
+#Defining Beam 5
+s:So/Beam5/Type                     = "Beam"
+s:So/Beam5/Component                = "BeamPosition5"
+s:So/Beam5/BeamParticle             = "proton"
+d:So/Beam5/BeamEnergy               = 69.87 MeV
+u:So/Beam5/BeamEnergySpread         = 0.757504
+s:So/Beam5/BeamPositionDistribution = "Flat"
+s:So/Beam5/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam5/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam5/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam5/BeamAngularDistribution  = "Flat"
+d:So/Beam5/BeamAngularCutoffX       = 1. deg
+d:So/Beam5/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam5/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition5/Parent="ExitWindow"
+s:Ge/BeamPosition5/Type="Group"
+d:Ge/BeamPosition5/TransX= 0. cm
+d:Ge/BeamPosition5/TransY= 0 cm
+d:Ge/BeamPosition5/TransZ=0. cm
+d:Ge/BeamPosition5/RotX=0. deg
+d:Ge/BeamPosition5/RotY=0. deg
+d:Ge/BeamPosition5/RotZ=0. deg
+
+#Defining Beam 6
+s:So/Beam6/Type                     = "Beam"
+s:So/Beam6/Component                = "BeamPosition6"
+s:So/Beam6/BeamParticle             = "proton"
+d:So/Beam6/BeamEnergy               = 69.87 MeV
+u:So/Beam6/BeamEnergySpread         = 0.757504
+s:So/Beam6/BeamPositionDistribution = "Flat"
+s:So/Beam6/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam6/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam6/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam6/BeamAngularDistribution  = "Flat"
+d:So/Beam6/BeamAngularCutoffX       = 1. deg
+d:So/Beam6/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam6/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition6/Parent="ExitWindow"
+s:Ge/BeamPosition6/Type="Group"
+d:Ge/BeamPosition6/TransX= 0.8 cm
+d:Ge/BeamPosition6/TransY= 0 cm
+d:Ge/BeamPosition6/TransZ=0. cm
+d:Ge/BeamPosition6/RotX=0. deg
+d:Ge/BeamPosition6/RotY=0. deg
+d:Ge/BeamPosition6/RotZ=0. deg
+
+#Defining Beam 7
+s:So/Beam7/Type                     = "Beam"
+s:So/Beam7/Component                = "BeamPosition7"
+s:So/Beam7/BeamParticle             = "proton"
+d:So/Beam7/BeamEnergy               = 69.87 MeV
+u:So/Beam7/BeamEnergySpread         = 0.757504
+s:So/Beam7/BeamPositionDistribution = "Flat"
+s:So/Beam7/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam7/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam7/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam7/BeamAngularDistribution  = "Flat"
+d:So/Beam7/BeamAngularCutoffX       = 1. deg
+d:So/Beam7/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam7/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition7/Parent="ExitWindow"
+s:Ge/BeamPosition7/Type="Group"
+d:Ge/BeamPosition7/TransX= -0.8 cm
+d:Ge/BeamPosition7/TransY= -0.8 cm
+d:Ge/BeamPosition7/TransZ=0. cm
+d:Ge/BeamPosition7/RotX=0. deg
+d:Ge/BeamPosition7/RotY=0. deg
+d:Ge/BeamPosition7/RotZ=0. deg
+
+#Defining Beam 8
+s:So/Beam8/Type                     = "Beam"
+s:So/Beam8/Component                = "BeamPosition8"
+s:So/Beam8/BeamParticle             = "proton"
+d:So/Beam8/BeamEnergy               = 69.87 MeV
+u:So/Beam8/BeamEnergySpread         = 0.757504
+s:So/Beam8/BeamPositionDistribution = "Flat"
+s:So/Beam8/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam8/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam8/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam8/BeamAngularDistribution  = "Flat"
+d:So/Beam8/BeamAngularCutoffX       = 1. deg
+d:So/Beam8/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam8/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition8/Parent="ExitWindow"
+s:Ge/BeamPosition8/Type="Group"
+d:Ge/BeamPosition8/TransX= 0. cm
+d:Ge/BeamPosition8/TransY= -0.8 cm
+d:Ge/BeamPosition8/TransZ=0. cm
+d:Ge/BeamPosition8/RotX=0. deg
+d:Ge/BeamPosition8/RotY=0. deg
+d:Ge/BeamPosition8/RotZ=0. deg
+
+#Defining Beam 9
+s:So/Beam9/Type                     = "Beam"
+s:So/Beam9/Component                = "BeamPosition9"
+s:So/Beam9/BeamParticle             = "proton"
+d:So/Beam9/BeamEnergy               = 69.87 MeV
+u:So/Beam9/BeamEnergySpread         = 0.757504
+s:So/Beam9/BeamPositionDistribution = "Flat"
+s:So/Beam9/BeamPositionCutoffShape  = "Rectangle"
+#Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
+d:So/Beam9/BeamPositionCutoffX      = 0.704625 mm
+d:So/Beam9/BeamPositionCutoffY      = 0.704625 mm
+#d:So//BeamPositionSpreadX      = 0.05 cm
+#d:So//BeamPositionSpreadY      = 0.05 cm
+s:So/Beam9/BeamAngularDistribution  = "Flat"
+d:So/Beam9/BeamAngularCutoffX       = 1. deg
+d:So/Beam9/BeamAngularCutoffY       = 1. deg
+#d:So/Example/BeamAngularSpreadX       = 0.0032 rad
+#d:So/Example/BeamAngularSpreadY       = 0.0032 rad
+i:So/Beam9/NumberOfHistoriesInRun   = NrHistories
+
+s:Ge/BeamPosition9/Parent="ExitWindow"
+s:Ge/BeamPosition9/Type="Group"
+d:Ge/BeamPosition9/TransX= 0.8 cm
+d:Ge/BeamPosition9/TransY= -0.8 cm
+d:Ge/BeamPosition9/TransZ=0. cm
+d:Ge/BeamPosition9/RotX=0. deg
+d:Ge/BeamPosition9/RotY=0. deg
+d:Ge/BeamPosition9/RotZ=0. deg
 
 
 

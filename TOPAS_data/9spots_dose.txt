@@ -1380,7 +1380,7 @@ s:So/Beam1/Type                     = "Beam"
 s:So/Beam1/Component                = "BeamPosition1"
 s:So/Beam1/BeamParticle             = "proton"
 d:So/Beam1/BeamEnergy               = 69.87 MeV
-u:So/Beam1/BeamEnergySpread         = 1.25
+u:So/Beam1/BeamEnergySpread         = 1.1
 s:So/Beam1/BeamPositionDistribution = "Flat"
 s:So/Beam1/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
@@ -1409,7 +1409,7 @@ s:So/Beam2/Type                     = "Beam"
 s:So/Beam2/Component                = "BeamPosition2"
 s:So/Beam2/BeamParticle             = "proton"
 d:So/Beam2/BeamEnergy               = 69.87 MeV
-u:So/Beam2/BeamEnergySpread         = 1.25
+u:So/Beam2/BeamEnergySpread         = 1.1
 s:So/Beam2/BeamPositionDistribution = "Flat"
 s:So/Beam2/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 1 * 1.40925 mm
@@ -1438,7 +1438,7 @@ s:So/Beam3/Type                     = "Beam"
 s:So/Beam3/Component                = "BeamPosition3"
 s:So/Beam3/BeamParticle             = "proton"
 d:So/Beam3/BeamEnergy               = 69.87 MeV
-u:So/Beam3/BeamEnergySpread         = 1.25
+u:So/Beam3/BeamEnergySpread         = 1.1
 s:So/Beam3/BeamPositionDistribution = "Flat"
 s:So/Beam3/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 1 * 1.40925 mm
@@ -1467,7 +1467,7 @@ s:So/Beam4/Type                     = "Beam"
 s:So/Beam4/Component                = "BeamPosition4"
 s:So/Beam4/BeamParticle             = "proton"
 d:So/Beam4/BeamEnergy               = 69.87 MeV
-u:So/Beam4/BeamEnergySpread         = 1.25
+u:So/Beam4/BeamEnergySpread         = 1.1
 s:So/Beam4/BeamPositionDistribution = "Flat"
 s:So/Beam4/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
@@ -1496,7 +1496,7 @@ s:So/Beam5/Type                     = "Beam"
 s:So/Beam5/Component                = "BeamPosition5"
 s:So/Beam5/BeamParticle             = "proton"
 d:So/Beam5/BeamEnergy               = 69.87 MeV
-u:So/Beam5/BeamEnergySpread         = 1.25
+u:So/Beam5/BeamEnergySpread         = 1.1
 s:So/Beam5/BeamPositionDistribution = "Flat"
 s:So/Beam5/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 1 * 1.40925 mm
@@ -1525,7 +1525,7 @@ s:So/Beam6/Type                     = "Beam"
 s:So/Beam6/Component                = "BeamPosition6"
 s:So/Beam6/BeamParticle             = "proton"
 d:So/Beam6/BeamEnergy               = 69.87 MeV
-u:So/Beam6/BeamEnergySpread         = 1.25
+u:So/Beam6/BeamEnergySpread         = 1.1
 s:So/Beam6/BeamPositionDistribution = "Flat"
 s:So/Beam6/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 1 * 1.40925 mm
@@ -1554,7 +1554,7 @@ s:So/Beam7/Type                     = "Beam"
 s:So/Beam7/Component                = "BeamPosition7"
 s:So/Beam7/BeamParticle             = "proton"
 d:So/Beam7/BeamEnergy               = 69.87 MeV
-u:So/Beam7/BeamEnergySpread         = 1.25
+u:So/Beam7/BeamEnergySpread         = 1.1
 s:So/Beam7/BeamPositionDistribution = "Flat"
 s:So/Beam7/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
@@ -1583,7 +1583,7 @@ s:So/Beam8/Type                     = "Beam"
 s:So/Beam8/Component                = "BeamPosition8"
 s:So/Beam8/BeamParticle             = "proton"
 d:So/Beam8/BeamEnergy               = 69.87 MeV
-u:So/Beam8/BeamEnergySpread         = 1.25
+u:So/Beam8/BeamEnergySpread         = 1.1
 s:So/Beam8/BeamPositionDistribution = "Flat"
 s:So/Beam8/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm
@@ -1612,7 +1612,7 @@ s:So/Beam9/Type                     = "Beam"
 s:So/Beam9/Component                = "BeamPosition9"
 s:So/Beam9/BeamParticle             = "proton"
 d:So/Beam9/BeamEnergy               = 69.87 MeV
-u:So/Beam9/BeamEnergySpread         = 1.25
+u:So/Beam9/BeamEnergySpread         = 1.1
 s:So/Beam9/BeamPositionDistribution = "Flat"
 s:So/Beam9/BeamPositionCutoffShape  = "Ellipse"
 #Get cutoff from 'spot size' as given by tp in matlab 0.5 * 1.40925 mm

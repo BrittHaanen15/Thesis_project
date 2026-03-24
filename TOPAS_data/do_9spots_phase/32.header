@@ -1,0 +1,51 @@
+TOPAS ASCII Phase Space
+
+Number of Original Histories: 15000
+Number of Original Histories that Reached Phase Space: 11790
+Number of Scored Particles: 21356
+
+Columns of data are as follows:
+ 1: Position X [cm]
+ 2: Position Y [cm]
+ 3: Position Z [cm]
+ 4: Direction Cosine X
+ 5: Direction Cosine Y
+ 6: Energy [MeV]
+ 7: Weight
+ 8: Particle Type (in PDG Format)
+ 9: Flag to tell if Third Direction Cosine is Negative (1 means true)
+10: Flag to tell if this is the First Scored Particle from this History (1 means true)
+11: Run ID
+12: Event ID
+13: Track ID
+14: Initial Kinetic Energy [MeV]
+15: Vertex Position X [cm]
+16: Vertex Position Y [cm]
+17: Vertex Position Z [cm]
+18: Initial Direction Cosine X
+19: Initial Direction Cosine Y
+20: Initial Direction Cosine Z
+
+Number of e+: 1
+Number of e-: 230
+Number of gamma: 217
+Number of neutron: 120
+Number of proton: 20786
+Number of alpha: 1
+Number of C12: 1
+
+Minimum Kinetic Energy of e+: 2.76225 MeV
+Minimum Kinetic Energy of e-: 0.00375037 MeV
+Minimum Kinetic Energy of gamma: 0.0044411 MeV
+Minimum Kinetic Energy of neutron: 9.78268e-06 MeV
+Minimum Kinetic Energy of proton: 1.67527 MeV
+Minimum Kinetic Energy of alpha: 7.49836 MeV
+Minimum Kinetic Energy of C12: 0.613803 MeV
+
+Maximum Kinetic Energy of e+: 2.76225 MeV
+Maximum Kinetic Energy of e-: 2.96585 MeV
+Maximum Kinetic Energy of gamma: 11.286 MeV
+Maximum Kinetic Energy of neutron: 45.8842 MeV
+Maximum Kinetic Energy of proton: 35.9696 MeV
+Maximum Kinetic Energy of alpha: 7.49836 MeV
+Maximum Kinetic Energy of C12: 0.613803 MeV

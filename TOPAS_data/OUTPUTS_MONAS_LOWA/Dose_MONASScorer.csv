@@ -1,6 +1,6 @@
 # TOPAS Version: 3.9
-# Parameter File: Low_withbeam_withMONAS.txt
+# Parameter File: Low_diffcyl.txt
 # Results for scorer: Dose_SV
 # Scored in component: TEgasSV
 # DoseToWater ( Gy ) : Sum   
-4.238236670062179e-06
+3.685311412482406e-06

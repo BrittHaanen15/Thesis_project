@@ -1,0 +1,6 @@
+# TOPAS Version: 3.9
+# Parameter File: Low_withbeam.txt
+# Results for scorer: Setup_low_CellLayer_Dose
+# Scored in component: ScorerCellLayer
+# DoseToWater ( Gy ) : Sum   
+9.799808076138561e-09

@@ -1,8 +1,8 @@
 TOPAS ASCII Phase Space
 
-Number of Original Histories: 42
-Number of Original Histories that Reached Phase Space: 1
-Number of Scored Particles: 1
+Number of Original Histories: 1000
+Number of Original Histories that Reached Phase Space: 135
+Number of Scored Particles: 143
 
 Columns of data are as follows:
  1: Position X [cm]
@@ -26,8 +26,8 @@ Columns of data are as follows:
 19: Initial Direction Cosine Y
 20: Initial Direction Cosine Z
 
-Number of proton: 1
+Number of proton: 143
 
-Minimum Kinetic Energy of proton: 3.74498 MeV
+Minimum Kinetic Energy of proton: 0.698267 MeV
 
-Maximum Kinetic Energy of proton: 3.74498 MeV
+Maximum Kinetic Energy of proton: 11.3623 MeV

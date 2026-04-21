@@ -1,0 +1,12 @@
+# MKM Parameters
+#
+# Alpha0 = 0.19 Gy-1
+# Beta = 0.05 Gy-2
+# AlphaX = 0.19 Gy-1 Reference radiation
+# Domain Radius = 0.44 um
+# Nucleus Radius = 8 um
+#
+# Dose[Gy], Survival, SurvivalStd, RBE, RBEStd
+2.0000000, 0.5399774, 0.0000000, 1.0459057, 0.0000000
+5.0000000, 0.1012088, 0.0000000, 1.0260070, 0.0000000
+8.0000000, 0.0077125, 0.0000000, 1.0181636, 0.0000000

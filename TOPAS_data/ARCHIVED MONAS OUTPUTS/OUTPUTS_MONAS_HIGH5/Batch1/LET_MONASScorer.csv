@@ -1,0 +1,9 @@
+# TOPAS Version: 3.9
+# Parameter File: Mid1.txt
+# Results for scorer: LET_SV
+# Scored in component: TEgasSV
+# Warning: Some voxels/bins in the primary scorer did not correspond to an entry in the sub-scorer (or sub-sub-scorers).
+# The value of the combined scorer for those voxels/bins has been set to 0.
+# Total number of voxels/bins set to 0 due to this mismatch: 1
+# ProtonLET ( MeV/mm/(g/cm3) ) : Sum   
+0

@@ -8,7 +8,7 @@ Repository contents:
 - Line dose analysis: contains a line profile exported from RS for the water phantom simulation. Also the results for the correction factor estimation in the back of the Bragg Peak.
 - MATLAB codes: contains the MATLAB codes that were used to analyse the gafchromic films and establish the calibration curve.
 - Mid LET calculation: contains the measured dose curve for 69.87 MeV to compare to the water phantom simulation. The water phantom simulation data itself is not in this repository as the files are too large.
-**- Python codes: contains all the Python codes for analysing and generating results.**
+- **Python codes: contains all the Python codes for analysing and generating results.**
 - Snout position results: contains the RS exported data and the resulting LET/dose maps to verify that 0.13 cm snout position difference yields no different dose and LET.
 - TOPAS_data: contains the TOPAS codes in 'codes', the dose and LET data for the created beam, the cell layer phase spaces for all configurations to calculate dose and LET (OUTPUTS_PHYSICS_...), and the MONAS lineal energy spectra for each setup, in batches if applicable (OUTPUTS_MONAS_...NR)
 - Treatment plans: contains the treatment plans for the cell irradiations

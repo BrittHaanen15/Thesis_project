@@ -1,9 +1,0 @@
-# TOPAS Version: 3.9
-# Parameter File: Field_dose.txt
-# Results for scorer: LET_43
-# Scored in component: Scorer43
-# Warning: Some voxels/bins in the primary scorer did not correspond to an entry in the sub-scorer (or sub-sub-scorers).
-# The value of the combined scorer for those voxels/bins has been set to 0.
-# Total number of voxels/bins set to 0 due to this mismatch: 1
-# ProtonLET ( MeV/mm/(g/cm3) ) : Sum   
-0

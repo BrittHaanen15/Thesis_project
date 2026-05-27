@@ -1,16 +1,21 @@
-i:Ts/Seed = 1
+i:Ts/Seed = 91
 #####################################################################################################################
 ######################################### DEFINITIONS THAT DEFINE SIMULATION ########################################
 #####################################################################################################################
 
 #Number of particles to simulate CAN CHANGE THIS
-i:NrHistories = 1000
+i:NrHistories = 5000
+
+#Amount of solid water added to setup on top of nozzle CAN CHANGE THIS
+d:SolidWaterAdded = 5 mm
+
+#d:Ph/Default/ProductionCut = 1 um
+#d:Ph/Default/CutForAllParticles = 1 um
 
 #Number of histories for MONAS solid statistics
 i:NrStatEvents = 1
 
-d:Ph/Default/ProductionCut = 1 nm
-d:Ph/Default/CutForAllParticles = 1 nm
+
 
 #####################################################################################################################
 ####################################### SOME FIXED PARAMETERS FOR THE SETUP #########################################
@@ -27,6 +32,8 @@ d:Top_of_GreyBox = 0 cm - SnoutPosition
 d:Top_of_Window = Top_of_GreyBox - GreyBoxHeight cm
 #Top of exit window is 23.4 cm under the top of the nozzle (Matilde info from Varian)
 d:Top_of_BeamExit = Top_of_GreyBox - 23.4 cm
+
+
 
 
 
@@ -146,20 +153,51 @@ s:Ge/CellflaskBottom/DrawingStyle = "Solid"
 
 
 
-### AIR BETWEEN WINDOW AND 10 MM PLATE ###################################################################
+### SOLID WATER ADDED ON TOP OF NOZZLE ##############################################################################
+#Define dimensions
+d:SolidWaterHLX = 12.5 cm
+d:SolidWaterHLY = 12.5 cm
+d:SolidWaterHLZ = 0.5 * SolidWaterAdded cm
+
+#Define solid water plate position
+#Its bottom is on the top of the grey box
+d:SolidWaterTransX = 0. cm
+d:SolidWaterTransY = 0. cm
+d:SolidWaterTransZ = Top_of_GreyBox + SolidWaterHLZ cm
+
+#Define solid water plate
+s:Ge/SolidWater/Type = "TsBox"
+s:Ge/SolidWater/Parent = "World"
+s:Ge/SolidWater/Material = "Lexan"
+d:Ge/SolidWater/HLX = SolidWaterHLX cm
+d:Ge/SolidWater/HLY = SolidWaterHLY cm
+d:Ge/SolidWater/HLZ = SolidWaterHLZ cm
+d:Ge/SolidWater/TransX = SolidWaterTransX cm
+d:Ge/SolidWater/TransY = SolidWaterTransY cm
+d:Ge/SolidWater/TransZ = SolidWaterTransZ cm
+d:Ge/SolidWater/RotX = 0. deg
+d:Ge/SolidWater/RotY = 0. deg
+d:Ge/SolidWater/RotZ = 0. deg
+s:Ge/SolidWater/Color = "yellow"
+s:Ge/SolidWater/DrawingStyle = "Solid"
+
+
+
+### AIR BETWEEN ADDED SOLID WATER AND 10 MM PLATE ###################################################################
 #Define dimensions 
 d:AirGapWaterPlatesHLX = 12.5 cm
 d:AirGapWaterPlatesHLY = 12.5 cm
 #Must fill the gap between the fixed 10 mm plate and the added plates
 d:Bottom_10Plate = SolidWater10TransZ - SolidWater10HLZ cm
-d:Height_of_airgap = Bottom_10Plate - Top_of_Window cm
+d:Top_AddedPlate = SolidWaterTransZ + SolidWaterHLZ cm
+d:Height_of_airgap = Bottom_10Plate - Top_AddedPlate cm
 d:AirGapWaterPlatesHLZ = 0.5 * Height_of_airgap cm
 
 #Define position
-#This air gap is positioned on the top of the grey box
+#This air gap is positioned on the top of the added solid water plates
 d:AirGapWaterPlatesTransX = 0. cm
 d:AirGapWaterPlatesTransY = 0. cm
-d:AirGapWaterPlatesTransZ = Top_of_Window + AirGapWaterPlatesHLZ cm
+d:AirGapWaterPlatesTransZ = Top_AddedPlate + AirGapWaterPlatesHLZ cm
 
 #Define air gap between range shifter and top of nozzle
 s:Ge/AirGapWaterPlates/Type     = "TsBox"
@@ -175,6 +213,97 @@ d:Ge/AirGapWaterPlates/RotX     = 0. deg
 d:Ge/AirGapWaterPlates/RotY     = 0. deg
 d:Ge/AirGapWaterPlates/RotZ     = 0. deg
 s:Ge/AirGapWaterPlates/Color    = "blue"
+
+
+
+### AIR GAP BETWEEN WINDOW AND RANGE SHIFTER ###################################################################
+#Define dimensions 
+d:AirGapWindowRangeHLX = 12.5 cm
+d:AirGapWindowRangeHLY = 12.5 cm
+d:AirGapWindowRangeHLZ = 2.0 cm
+
+#Define position
+#This air gap is positioned on the top of the window
+d:AirGapWindowRangeTransX = 0. cm
+d:AirGapWindowRangeTransY = 0. cm
+d:AirGapWindowRangeTransZ = Top_of_Window + AirGapWindowRangeHLZ cm
+
+#Define air gap between exit window and range shifter
+s:Ge/AirGapWindowRange/Type     = "TsBox"
+s:Ge/AirGapWindowRange/Material = "G4_AIR"
+s:Ge/AirGapWindowRange/Parent   = "World"
+d:Ge/AirGapWindowRange/HLX      = AirGapWindowRangeHLX cm
+d:Ge/AirGapWindowRange/HLY      = AirGapWindowRangeHLY cm
+d:Ge/AirGapWindowRange/HLZ      = AirGapWindowRangeHLZ cm
+d:Ge/AirGapWindowRange/TransX   = AirGapWindowRangeTransX cm
+d:Ge/AirGapWindowRange/TransY   = AirGapWindowRangeTransY cm
+d:Ge/AirGapWindowRange/TransZ   = AirGapWindowRangeTransZ cm
+d:Ge/AirGapWindowRange/RotX     = 0. deg
+d:Ge/AirGapWindowRange/RotY     = 0. deg
+d:Ge/AirGapWindowRange/RotZ     = 0. deg
+s:Ge/AirGapWindowRange/Color    = "blue"
+
+
+
+### RANGE SHIFTER ###################################################################################################
+#Define dimensions
+d:RangeShifterHLX = 12.5 cm
+d:RangeShifterHLY = 12.5 cm
+d:RangeShifterHLZ = 1.0 cm
+
+#Define Position
+d:RangeShifterTransX = 0. cm
+d:RangeShifterTransY = 0. cm
+d:Bottom_of_Range = AirGapWindowRangeTransZ + AirGapWindowRangeHLZ cm
+d:RangeShifterTransZ = Bottom_of_Range + RangeShifterHLZ cm
+
+#Define RangeShifter
+s:Ge/RangeShifter/Type     = "TsBox"
+s:Ge/RangeShifter/Material = "Lexan"
+s:Ge/RangeShifter/Parent   = "World"
+d:Ge/RangeShifter/HLX      = RangeShifterHLX cm
+d:Ge/RangeShifter/HLY      = RangeShifterHLY cm
+d:Ge/RangeShifter/HLZ      = RangeShifterHLZ cm
+d:Ge/RangeShifter/TransX   = RangeShifterTransX cm
+d:Ge/RangeShifter/TransY   = RangeShifterTransY cm
+d:Ge/RangeShifter/TransZ   = RangeShifterTransZ cm
+d:Ge/RangeShifter/RotX     = 0. deg 
+d:Ge/RangeShifter/RotY     = 0. deg
+d:Ge/RangeShifter/RotZ     = 0. deg
+s:Ge/RangeShifter/Color    = "pink"
+s:Ge/RangeShifter/DrawingStyle = "Solid"
+
+
+
+### AIR GAP BETWEEN RANGE SHIFTER AND TOP OF NOZZLE #################################################################
+#Define dimensions 
+d:AirGapRangeTopHLX = 12.5 cm 
+d:AirGapRangeTopHLY = 12.5 cm
+#Must fill the gap between the range shifter and the top of the nozzle
+d:Top_of_Range = RangeShifterTransZ + RangeShifterHLZ cm
+d:AirGap_height = Top_of_GreyBox - Top_of_Range cm
+d:AirGapRangeTopHLZ = 0.5 * AirGap_height cm
+
+#Define position
+#This air gap is positioned on the top of the range shifter
+d:AirGapRangeTopTransX = 0. cm
+d:AirGapRangeTopTransY = 0. cm
+d:AirGapRangeTopTransZ = Top_of_Range + AirGapRangeTopHLZ cm
+
+#Define air gap between range shifter and top of nozzle
+s:Ge/AirGapRangeTop/Type     = "TsBox"
+s:Ge/AirGapRangeTop/Material = "G4_AIR"
+s:Ge/AirGapRangeTop/Parent   = "World"
+d:Ge/AirGapRangeTop/HLX      = AirGapRangeTopHLX cm
+d:Ge/AirGapRangeTop/HLY      = AirGapRangeTopHLY cm
+d:Ge/AirGapRangeTop/HLZ      = AirGapRangeTopHLZ cm
+d:Ge/AirGapRangeTop/TransX   = AirGapRangeTopTransX cm
+d:Ge/AirGapRangeTop/TransY   = AirGapRangeTopTransY cm
+d:Ge/AirGapRangeTop/TransZ   = AirGapRangeTopTransZ cm
+d:Ge/AirGapRangeTop/RotX     = 0. deg
+d:Ge/AirGapRangeTop/RotY     = 0. deg
+d:Ge/AirGapRangeTop/RotZ     = 0. deg
+s:Ge/AirGapRangeTop/Color    = "blue"
 
 
 
@@ -320,8 +449,8 @@ d:Ge/TEgasSV/RotX     = 0. deg
 d:Ge/TEgasSV/RotY     = 0. deg
 d:Ge/TEgasSV/RotZ     = 0. deg
 #s:Ge/TEgasSV/AssignToRegionNamed = "MyRegion"
-d:Ge/TEgasSV/MaxStepSize = 0.5 nm  
-#d:Ph/Default/CutForProton = 0.5 um
+d:Ge/TEgasSV/MaxStepSize = 0.5 um
+d:Ph/Default/CutForProton = 0.5 um 
 
 #Scoring Dose-averaged LET (LET_d) and Dose for the microdosimeter
 s:Sc/LET_SV/Quantity = "ProtonLET"
@@ -346,22 +475,22 @@ s:Sc/Scorer/Component   = "TEgasSV"
 i:Sc/Scorer/NumberOfHistoriesInRun    = NrHistories
 i:Sc/Scorer/GeometryNumber            = 1
 d:Sc/Scorer/SensitiveVolumeRadius     = 2. mm      # radius of sensitive volume (except for silicon microdosimeter)
-d:Sc/Scorer/TissueEquivalentRadius    = 2. mm      # radius of equivalent size of tissue equivalent volume (to calculate mean chord length)
-#d:Sc/Scorer/MeanPathLength           = 10 um        # Mean path length for SOI detector 
+d:Sc/Scorer/TissueEquivalentRadius    = .319 mm      # radius of equivalent size of tissue equivalent volume (to calculat>
+#d:Sc/Scorer/MeanPathLength           = 10 um        # Mean path length for SOI detector
 d:Sc/Scorer/TransX                    = 0 mm         # x position of sensitive volume from world center
 d:Sc/Scorer/TransY                    = 0 mm         # y position of sensitive volume from world center
-d:Sc/Scorer/TransZ                    = ScorerCellLayerTransZ + ScorerCellLayerHLZ mm     # y position of sensitive volume from world center
+d:Sc/Scorer/TransZ                    = ScorerCellLayerTransZ + ScorerCellLayerHLZ mm     # y position of sensitive vol>
 s:Sc/Scorer/OutputType                = "ASCII"       # OutputType must be ASCII, Binary or ROOT (unit: keV/um)
-s:Sc/Scorer/IfOutputFileAlreadyExists = "Overwrite" 
+s:Sc/Scorer/IfOutputFileAlreadyExists = "Overwrite"
 s:Sc/Scorer/OutputFile = "./OUTPUTS_MONAS/MONASScorer"
-d:Sc/Scorer/MaxStepSize = 0.5 nm  
+d:Sc/Scorer/MaxStepSize = 1 um
 
 # Optional parameters
 u:Sc/Scorer/LinealEnergyLowerlimit      = 0.1         # in unit of keV/um
 u:Sc/Scorer/LinealEnergyUpperlimit     = 1000        # in unit of keV/um
 b:Sc/Scorer/IncludeFrequencyMeanLinealEnergy   = "False"
 b:Sc/Scorer/IncludeDoseMeanLinealEnergy   = "False"
-u:Sc/Scorer/PileupProbability = 5.0
+u:Sc/Scorer/PileupProbability = 20.0
 b:Sc/Scorer/GetStatisticInfo =  "False"
 i:Sc/Scorer/SpectrumUpdateTimes = NrHistories
 b:Sc/Scorer/SaveSpecificEnergySpecra = "False"
@@ -390,7 +519,6 @@ u:Sc/Scorer/GSM2_alphaX = 0.19 #HSG 200 kV
 u:Sc/Scorer/GSM2_betaX = 0.05 #HSG 200 kV
 
 uv:Sc/Scorer/SurvivalDoses = 3 2 8 3
-
 
 
 #####################################################################################################################
@@ -674,11 +802,12 @@ d:Ge/BeamPosition9/RotZ=0. deg
 #d:Gr/ViewA/AxesSize         = 10 cm
 #Ts/UseQt = "True"
 
+
  
 #Physics List
 
 sv:Ph/Default/Modules = 6 "g4em-standard_opt4" "g4h-phy_QGSP_BIC_HP" "g4decay" "g4ion-binarycascade" "g4h-elastic_HP" "g4stopping"
 
-b:Ts/PauseBeforeQuit = "True"
+b:Ts/PauseBeforeQuit = "False"
 
 
